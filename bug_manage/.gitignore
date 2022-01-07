@@ -1,5 +1,5 @@
 # 本地配置文件
-.vscode/
+.idea
 .jsbeautifyrc
 
 # python缓存文件
