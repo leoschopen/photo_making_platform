@@ -120,8 +120,18 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-#短信模板
+#短信模板与配置
 SMS = 0;
+TENCENT_SMS_APP_ID = 1400621269
+TENCENT_SMS_APP_KEY = "bf52a161deb810a1964ee8358adb4f5a"
+TENCENT_SMS_SIGN = "Leo智库"
+
+TENCENT_SMS_TEMPLATE = {
+    'register':1270874,
+    'login':1270870
+}
+
+
 try:
     from.local_settings import *
 except ImportError:
