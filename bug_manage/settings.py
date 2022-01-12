@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'app01.apps.App01Config',
+    'web.apps.WebConfig',
 ]
 
 MIDDLEWARE = [
@@ -129,6 +131,23 @@ TENCENT_SMS_SIGN = "666"
 TENCENT_SMS_TEMPLATE = {
     'register':1270874,
     'login':1270870
+}
+
+
+# 上面是django项目settings中的其他配置....
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://localhost:6379", # 安装redis的主机的 IP 和 端口
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+            "CONNECTION_POOL_KWARGS": {
+                "max_connections": 1000,
+                "encoding": 'utf-8'
+            },
+            "PASSWORD": "foobared" # redis密码
+        }
+    }
 }
 
 
