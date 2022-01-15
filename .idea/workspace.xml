@@ -2,109 +2,932 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="648211ec-7dce-4708-97ce-c6cc2ebb8b85" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app01/templates/app01/register.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app01/try/redisConnect.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/layout/basic.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/register.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap-grid.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap-grid.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap-grid.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap-grid.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap-grid.rtl.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap-grid.rtl.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap-grid.rtl.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap-grid.rtl.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap-reboot.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap-reboot.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap-reboot.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap-reboot.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap-reboot.rtl.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap-reboot.rtl.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap-reboot.rtl.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap-reboot.rtl.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap-utilities.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap-utilities.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap-utilities.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap-utilities.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap-utilities.rtl.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap-utilities.rtl.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap-utilities.rtl.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap-utilities.rtl.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap.rtl.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap.rtl.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap.rtl.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap.rtl.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/js/bootstrap.bundle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/js/bootstrap.bundle.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/js/bootstrap.bundle.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/js/bootstrap.bundle.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/js/bootstrap.esm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/js/bootstrap.esm.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/js/bootstrap.esm.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/js/bootstrap.esm.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/js/bootstrap.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/js/bootstrap.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/HELP-US-OUT.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/css/font-awesome.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/css/font-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/less/animated.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/less/bordered-pulled.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/less/core.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/less/fixed-width.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/less/font-awesome.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/less/icons.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/less/larger.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/less/list.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/less/mixins.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/less/path.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/less/rotated-flipped.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/less/screen-reader.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/less/stacked.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/less/variables.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/scss/_animated.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/scss/_bordered-pulled.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/scss/_core.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/scss/_fixed-width.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/scss/_icons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/scss/_larger.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/scss/_list.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/scss/_mixins.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/scss/_path.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/scss/_rotated-flipped.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/scss/_screen-reader.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/scss/_stacked.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/scss/_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/scss/font-awesome.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/view/account.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app01/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/forms/account.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/css/account.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/img/index/index-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/img/index/index-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/img/index/index-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/img/index/index-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/js/cos-js-sdk-v5.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/css/bootstrap-datepicker.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/css/bootstrap-datepicker.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/css/bootstrap-datepicker.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/css/bootstrap-datepicker.standalone.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/css/bootstrap-datepicker.standalone.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/css/bootstrap-datepicker.standalone.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/css/bootstrap-datepicker3.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/css/bootstrap-datepicker3.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/css/bootstrap-datepicker3.standalone.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/css/bootstrap-datepicker3.standalone.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/css/bootstrap-datepicker3.standalone.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/js/bootstrap-datepicker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/js/bootstrap-datepicker.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker-en-CA.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.ar-tn.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.ar.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.az.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.bg.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.bm.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.bn.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.br.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.bs.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.ca.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.cs.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.cy.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.da.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.de.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.el.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.en-AU.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.en-CA.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.en-GB.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.en-IE.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.en-NZ.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.en-ZA.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.eo.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.es.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.et.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.eu.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.fa.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.fi.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.fo.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.fr-CH.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.fr.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.gl.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.he.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.hi.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.hr.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.hu.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.hy.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.id.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.is.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.it-CH.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.it.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.ja.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.ka.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.kh.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.kk.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.km.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.ko.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.kr.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.lt.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.lv.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.me.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.mk.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.mn.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.ms.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.nl-BE.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.nl.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.no.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.oc.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.pl.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.pt-BR.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.pt.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.ro.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.rs-latin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.rs.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.ru.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.si.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.sk.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.sl.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.sq.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.sr-latin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.sr.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.sv.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.sw.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.ta.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.tg.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.th.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.tk.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.tr.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.uk.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.uz-cyrl.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.uz-latn.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.vi.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.zh-TW.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/css/bootstrap-select.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/css/bootstrap-select.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/css/bootstrap-select.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/bootstrap-select.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/bootstrap-select.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/bootstrap-select.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/bootstrap-select.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-am_ET.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-am_ET.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-am_ET.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-ar_AR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-ar_AR.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-ar_AR.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-bg_BG.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-bg_BG.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-bg_BG.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-cs_CZ.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-cs_CZ.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-cs_CZ.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-da_DK.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-da_DK.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-da_DK.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-de_DE.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-de_DE.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-de_DE.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-en_US.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-en_US.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-en_US.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-es_CL.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-es_CL.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-es_CL.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-es_ES.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-es_ES.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-es_ES.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-et_EE.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-et_EE.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-et_EE.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-eu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-eu.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-eu.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-fa_IR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-fa_IR.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-fa_IR.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-fi_FI.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-fi_FI.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-fi_FI.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-fr_FR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-fr_FR.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-fr_FR.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-hr_HR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-hr_HR.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-hr_HR.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-hu_HU.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-hu_HU.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-hu_HU.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-id_ID.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-id_ID.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-id_ID.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-it_IT.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-it_IT.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-it_IT.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-ja_JP.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-ja_JP.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-ja_JP.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-kh_KM.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-kh_KM.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-kh_KM.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-ko_KR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-ko_KR.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-ko_KR.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-lt_LT.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-lt_LT.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-lt_LT.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-lv_LV.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-lv_LV.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-lv_LV.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-nb_NO.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-nb_NO.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-nb_NO.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-nl_NL.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-nl_NL.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-nl_NL.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-pl_PL.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-pl_PL.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-pl_PL.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-pt_BR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-pt_BR.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-pt_BR.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-pt_PT.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-pt_PT.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-pt_PT.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-ro_RO.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-ro_RO.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-ro_RO.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-ru_RU.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-ru_RU.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-ru_RU.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-sk_SK.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-sk_SK.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-sk_SK.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-sl_SI.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-sl_SI.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-sl_SI.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-sv_SE.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-sv_SE.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-sv_SE.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-tr_TR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-tr_TR.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-tr_TR.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-ua_UA.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-ua_UA.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-ua_UA.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-vi_VN.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-vi_VN.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-vi_VN.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-zh_CN.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-zh_CN.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-zh_CN.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-zh_TW.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-zh_TW.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap-select/js/i18n/defaults-zh_TW.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap/css/bootstrap-theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap/css/bootstrap-theme.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap/css/bootstrap-theme.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap/css/bootstrap-theme.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap/js/npm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/daterangepicker/daterangepicker.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/daterangepicker/daterangepicker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/daterangepicker/moment.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/.jshintrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/BUGS.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/CHANGE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/Gulpfile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/bower.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/css/editormd.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/css/editormd.logo.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/css/editormd.logo.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/css/editormd.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/css/editormd.preview.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/css/editormd.preview.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/docs/editormd.js.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/docs/fonts/OpenSans-Bold-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/docs/fonts/OpenSans-Bold-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/docs/fonts/OpenSans-Bold-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/docs/fonts/OpenSans-BoldItalic-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/docs/fonts/OpenSans-BoldItalic-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/docs/fonts/OpenSans-BoldItalic-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/docs/fonts/OpenSans-Italic-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/docs/fonts/OpenSans-Italic-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/docs/fonts/OpenSans-Italic-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/docs/fonts/OpenSans-Light-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/docs/fonts/OpenSans-Light-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/docs/fonts/OpenSans-Light-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/docs/fonts/OpenSans-LightItalic-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/docs/fonts/OpenSans-LightItalic-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/docs/fonts/OpenSans-LightItalic-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/docs/fonts/OpenSans-Regular-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/docs/fonts/OpenSans-Regular-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/docs/fonts/OpenSans-Regular-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/docs/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/docs/scripts/linenumber.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/docs/scripts/prettify/Apache-License-2.0.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/docs/scripts/prettify/lang-css.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/docs/scripts/prettify/prettify.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/docs/styles/jsdoc-default.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/docs/styles/prettify-jsdoc.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/docs/styles/prettify-tomorrow.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/editormd.amd.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/editormd.amd.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/editormd.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/editormd.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/@links.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/auto-height.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/change-mode.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/code-fold.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/custom-keyboard-shortcuts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/custom-toolbar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/define-plugin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/delay-renderer-preview.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/dynamic-create-editormd.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/emoji.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/extends.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/external-use.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/flowchart.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/form-get-value.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/full.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/goto-line.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/html-preview-markdown-to-html-custom-toc-container.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/html-preview-markdown-to-html.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/html-tags-decode.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/image-cross-domain-upload.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/image-upload.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/images/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/images/7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/images/8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/images/editormd-screenshot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/js/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/js/require.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/js/sea.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/js/seajs-main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/js/zepto.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/katex.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/manually-load-modules.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/multi-editormd.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/multi-languages.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/on-off.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/onchange.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/onfullscreen.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/onload.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/onpreviewing-onpreviewed.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/onresize.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/onscroll-onpreviewscroll.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/onwatch-onunwatch.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/page-break.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/php/cross-domain-upload.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/php/editormd.uploader.class.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/php/post.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/php/upload.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/php/upload_callback.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/readonly.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/resettings.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/search-replace.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/sequence-diagram.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/set-get-replace-selection.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/simple.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/sync-scrolling.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/task-lists.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/test.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/themes.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/toc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/toolbar-auto-fixed.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/use-requirejs.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/use-seajs.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/examples/use-zepto.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/fonts/editormd-logo.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/fonts/editormd-logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/fonts/editormd-logo.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/fonts/editormd-logo.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/images/loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/images/loading@2x.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/images/loading@3x.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/images/logos/editormd-favicon-16x16.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/images/logos/editormd-favicon-24x24.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/images/logos/editormd-favicon-32x32.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/images/logos/editormd-favicon-48x48.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/images/logos/editormd-favicon-64x64.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/images/logos/editormd-logo-114x114.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/images/logos/editormd-logo-120x120.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/images/logos/editormd-logo-144x144.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/images/logos/editormd-logo-16x16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/images/logos/editormd-logo-180x180.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/images/logos/editormd-logo-240x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/images/logos/editormd-logo-24x24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/images/logos/editormd-logo-320x320.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/images/logos/editormd-logo-32x32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/images/logos/editormd-logo-48x48.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/images/logos/editormd-logo-57x57.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/images/logos/editormd-logo-64x64.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/images/logos/editormd-logo-72x72.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/images/logos/editormd-logo-96x96.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/images/logos/vi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/languages/en.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/languages/zh-tw.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/AUTHORS" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/comment/comment.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/comment/continuecomment.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/dialog/dialog.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/dialog/dialog.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/display/fullscreen.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/display/fullscreen.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/display/panel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/display/placeholder.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/display/rulers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/edit/closebrackets.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/edit/closetag.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/edit/continuelist.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/edit/matchbrackets.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/edit/matchtags.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/edit/trailingspace.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/fold/brace-fold.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/fold/comment-fold.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/fold/foldcode.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/fold/foldgutter.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/fold/foldgutter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/fold/indent-fold.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/fold/markdown-fold.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/fold/xml-fold.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/hint/anyword-hint.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/hint/css-hint.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/hint/html-hint.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/hint/javascript-hint.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/hint/show-hint.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/hint/show-hint.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/hint/sql-hint.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/hint/xml-hint.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/lint/coffeescript-lint.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/lint/css-lint.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/lint/javascript-lint.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/lint/json-lint.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/lint/lint.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/lint/lint.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/lint/yaml-lint.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/merge/merge.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/merge/merge.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/mode/loadmode.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/mode/multiplex.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/mode/multiplex_test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/mode/overlay.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/mode/simple.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/runmode/colorize.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/runmode/runmode-standalone.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/runmode/runmode.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/runmode/runmode.node.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/scroll/annotatescrollbar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/scroll/scrollpastend.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/scroll/simplescrollbars.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/scroll/simplescrollbars.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/search/match-highlighter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/search/matchesonscrollbar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/search/matchesonscrollbar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/search/search.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/search/searchcursor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/selection/active-line.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/selection/mark-selection.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/selection/selection-pointer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/tern/tern.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/tern/tern.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/tern/worker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addon/wrap/hardwrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/addons.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/bower.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/codemirror.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/codemirror.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/lib/codemirror.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/lib/codemirror.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/apl/apl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/apl/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/asterisk/asterisk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/asterisk/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/clike/clike.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/clike/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/clike/scala.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/clojure/clojure.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/clojure/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/cobol/cobol.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/cobol/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/coffeescript/coffeescript.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/coffeescript/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/commonlisp/commonlisp.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/commonlisp/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/css/css.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/css/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/css/less.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/css/less_test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/css/scss.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/css/scss_test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/css/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/cypher/cypher.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/cypher/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/d/d.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/d/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/dart/dart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/dart/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/diff/diff.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/diff/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/django/django.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/django/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/dockerfile/dockerfile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/dockerfile/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/dtd/dtd.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/dtd/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/dylan/dylan.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/dylan/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/ebnf/ebnf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/ebnf/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/ecl/ecl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/ecl/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/eiffel/eiffel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/eiffel/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/erlang/erlang.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/erlang/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/forth/forth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/forth/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/fortran/fortran.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/fortran/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/gas/gas.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/gas/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/gfm/gfm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/gfm/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/gfm/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/gherkin/gherkin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/gherkin/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/go/go.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/go/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/groovy/groovy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/groovy/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/haml/haml.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/haml/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/haml/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/haskell/haskell.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/haskell/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/haxe/haxe.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/haxe/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/htmlembedded/htmlembedded.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/htmlembedded/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/htmlmixed/htmlmixed.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/htmlmixed/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/http/http.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/http/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/idl/idl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/idl/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/jade/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/jade/jade.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/javascript/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/javascript/javascript.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/javascript/json-ld.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/javascript/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/javascript/typescript.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/jinja2/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/jinja2/jinja2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/julia/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/julia/julia.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/kotlin/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/kotlin/kotlin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/livescript/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/livescript/livescript.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/lua/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/lua/lua.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/markdown/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/markdown/markdown.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/markdown/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/meta.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/mirc/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/mirc/mirc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/mllike/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/mllike/mllike.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/modelica/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/modelica/modelica.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/nginx/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/nginx/nginx.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/ntriples/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/ntriples/ntriples.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/octave/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/octave/octave.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/pascal/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/pascal/pascal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/pegjs/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/pegjs/pegjs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/perl/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/perl/perl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/php/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/php/php.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/php/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/pig/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/pig/pig.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/properties/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/properties/properties.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/puppet/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/puppet/puppet.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/python/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/python/python.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/q/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/q/q.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/r/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/r/r.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/rpm/changes/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/rpm/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/rpm/rpm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/rst/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/rst/rst.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/ruby/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/ruby/ruby.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/ruby/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/rust/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/rust/rust.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/sass/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/sass/sass.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/scheme/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/scheme/scheme.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/shell/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/shell/shell.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/shell/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/sieve/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/sieve/sieve.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/slim/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/slim/slim.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/slim/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/smalltalk/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/smalltalk/smalltalk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/smarty/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/smarty/smarty.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/smartymixed/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/smartymixed/smartymixed.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/solr/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/solr/solr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/soy/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/soy/soy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/sparql/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/sparql/sparql.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/spreadsheet/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/spreadsheet/spreadsheet.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/sql/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/sql/sql.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/stex/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/stex/stex.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/stex/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/stylus/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/stylus/stylus.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/tcl/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/tcl/tcl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/textile/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/textile/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/textile/textile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/tiddlywiki/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/tiddlywiki/tiddlywiki.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/tiddlywiki/tiddlywiki.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/tiki/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/tiki/tiki.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/tiki/tiki.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/toml/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/toml/toml.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/tornado/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/tornado/tornado.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/turtle/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/turtle/turtle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/vb/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/vb/vb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/vbscript/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/vbscript/vbscript.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/velocity/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/velocity/velocity.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/verilog/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/verilog/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/verilog/verilog.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/xml/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/xml/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/xml/xml.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/xquery/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/xquery/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/xquery/xquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/yaml/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/yaml/yaml.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/z80/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/mode/z80/z80.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/modes.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/theme/3024-day.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/theme/3024-night.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/theme/ambiance-mobile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/theme/ambiance.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/theme/base16-dark.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/theme/base16-light.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/theme/blackboard.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/theme/cobalt.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/theme/colorforth.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/theme/eclipse.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/theme/elegant.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/theme/erlang-dark.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/theme/lesser-dark.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/theme/mbo.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/theme/mdn-like.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/theme/midnight.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/theme/monokai.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/theme/neat.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/theme/neo.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/theme/night.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/theme/paraiso-dark.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/theme/paraiso-light.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/theme/pastel-on-dark.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/theme/rubyblue.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/theme/solarized.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/theme/the-matrix.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/theme/tomorrow-night-bright.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/theme/tomorrow-night-eighties.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/theme/twilight.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/theme/vibrant-ink.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/theme/xq-dark.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/theme/xq-light.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/codemirror/theme/zenburn.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/flowchart.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/jquery.flowchart.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/marked.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/prettify.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/raphael.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/sequence-diagram.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/lib/underscore.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/plugins/code-block-dialog/code-block-dialog.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/plugins/emoji-dialog/emoji-dialog.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/plugins/emoji-dialog/emoji.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/plugins/goto-line-dialog/goto-line-dialog.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/plugins/help-dialog/help-dialog.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/plugins/help-dialog/help.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/plugins/html-entities-dialog/html-entities-dialog.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/plugins/html-entities-dialog/html-entities.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/plugins/image-dialog/image-dialog.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/plugins/link-dialog/link-dialog.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/plugins/plugin-template.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/plugins/preformatted-text-dialog/preformatted-text-dialog.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/plugins/reference-link-dialog/reference-link-dialog.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/plugins/table-dialog/table-dialog.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/plugins/test-plugin/test-plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/scss/editormd.codemirror.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/scss/editormd.dialog.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/scss/editormd.form.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/scss/editormd.grid.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/scss/editormd.logo.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/scss/editormd.menu.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/scss/editormd.preview.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/scss/editormd.preview.themes.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/scss/editormd.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/scss/editormd.tab.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/scss/editormd.themes.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/scss/font-awesome.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/scss/github-markdown.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/scss/lib/prefixes.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/scss/lib/variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/scss/prettify.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/src/editormd.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/tests/bootstrap-test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/tests/codemirror-searchbox-test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/tests/codemirror-test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/tests/css/bootstrap-theme.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/tests/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/tests/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/tests/js/searchbox.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/tests/katex-tests.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/tests/marked-@at-test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/tests/marked-emoji-test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/tests/marked-heading-link-test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/tests/marked-todo-list-test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/tests/qunit/qunit-1.16.0.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/editor-md/tests/qunit/qunit-1.16.0.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/highcharts/highcharts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/css/select2.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/css/select2.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/i18n/af.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/i18n/ar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/i18n/az.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/i18n/bg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/i18n/bn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/i18n/bs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/i18n/ca.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/i18n/cs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/i18n/da.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/i18n/de.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/i18n/dsb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/i18n/el.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/i18n/en.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/i18n/es.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/i18n/et.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/i18n/eu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/i18n/fa.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/i18n/fi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/i18n/fr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/i18n/gl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/i18n/he.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/i18n/hi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/i18n/hr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/i18n/hsb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/i18n/hu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/i18n/hy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/i18n/id.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/i18n/is.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/i18n/it.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/i18n/ja.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/i18n/ka.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/i18n/km.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/i18n/ko.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/i18n/lt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/i18n/lv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/i18n/mk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/i18n/ms.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/i18n/nb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/i18n/ne.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/i18n/nl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/i18n/pl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/i18n/ps.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/i18n/pt-BR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/i18n/pt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/i18n/ro.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/i18n/ru.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/i18n/sk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/i18n/sl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/i18n/sq.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/i18n/sr-Cyrl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/i18n/sr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/i18n/sv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/i18n/th.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/i18n/tk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/i18n/tr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/i18n/uk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/i18n/vi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/i18n/zh-CN.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/i18n/zh-TW.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/select2.full.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/select2.full.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/select2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/plugin/select2/js/select2.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/templates/layout/basic.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/templates/layout/manage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/templates/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/views/account.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app01/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app01/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app01/templates/app01/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/app01/templates/app01/register.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app01/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app01/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bug_manage/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/bug_manage/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bug_manage/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/bug_manage/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/layout/basic.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/js/jquery-3.4.1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/js/jquery-3.4.1.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/js/jquery-3.4.1.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap-grid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap-grid.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap-grid.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap-grid.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap-grid.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap-grid.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap-grid.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap-grid.rtl.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap-reboot.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap-reboot.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap-reboot.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap-reboot.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap-reboot.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap-reboot.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap-reboot.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap-reboot.rtl.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap-utilities.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap-utilities.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap-utilities.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap-utilities.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap-utilities.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap-utilities.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap-utilities.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap-utilities.rtl.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/css/bootstrap.rtl.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/fonts/glyphicons-halflings-regular.eot" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/fonts/glyphicons-halflings-regular.svg" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/fonts/glyphicons-halflings-regular.woff" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/plugin/bootstrap/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/js/bootstrap.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/js/bootstrap.bundle.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/js/bootstrap.bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/js/bootstrap.bundle.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/js/bootstrap.esm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/js/bootstrap.esm.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/js/bootstrap.esm.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/js/bootstrap.esm.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/js/bootstrap.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/bootstrap/js/bootstrap.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/HELP-US-OUT.txt" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/plugin/font-awesome/HELP-US-OUT.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/css/font-awesome.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/plugin/font-awesome/css/font-awesome.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/css/font-awesome.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/plugin/font-awesome/css/font-awesome.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/fonts/FontAwesome.otf" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/plugin/font-awesome/fonts/FontAwesome.otf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/fonts/fontawesome-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/plugin/font-awesome/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/fonts/fontawesome-webfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/plugin/font-awesome/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/fonts/fontawesome-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/plugin/font-awesome/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/fonts/fontawesome-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/plugin/font-awesome/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/fonts/fontawesome-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/plugin/font-awesome/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/less/animated.less" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/plugin/font-awesome/less/animated.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/less/bordered-pulled.less" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/plugin/font-awesome/less/bordered-pulled.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/less/core.less" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/plugin/font-awesome/less/core.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/less/fixed-width.less" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/plugin/font-awesome/less/fixed-width.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/less/font-awesome.less" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/plugin/font-awesome/less/font-awesome.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/less/icons.less" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/plugin/font-awesome/less/icons.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/less/larger.less" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/plugin/font-awesome/less/larger.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/less/list.less" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/plugin/font-awesome/less/list.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/less/mixins.less" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/plugin/font-awesome/less/mixins.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/less/path.less" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/plugin/font-awesome/less/path.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/less/rotated-flipped.less" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/plugin/font-awesome/less/rotated-flipped.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/less/screen-reader.less" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/plugin/font-awesome/less/screen-reader.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/less/stacked.less" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/plugin/font-awesome/less/stacked.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/less/variables.less" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/plugin/font-awesome/less/variables.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/scss/_animated.scss" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/plugin/font-awesome/scss/_animated.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/scss/_bordered-pulled.scss" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/plugin/font-awesome/scss/_bordered-pulled.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/scss/_core.scss" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/plugin/font-awesome/scss/_core.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/scss/_fixed-width.scss" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/plugin/font-awesome/scss/_fixed-width.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/scss/_icons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/plugin/font-awesome/scss/_icons.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/scss/_larger.scss" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/plugin/font-awesome/scss/_larger.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/scss/_list.scss" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/plugin/font-awesome/scss/_list.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/scss/_mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/plugin/font-awesome/scss/_mixins.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/scss/_path.scss" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/plugin/font-awesome/scss/_path.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/scss/_rotated-flipped.scss" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/plugin/font-awesome/scss/_rotated-flipped.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/scss/_screen-reader.scss" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/plugin/font-awesome/scss/_screen-reader.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/scss/_stacked.scss" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/plugin/font-awesome/scss/_stacked.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/scss/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/plugin/font-awesome/scss/_variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/static/plugin/font-awesome/scss/font-awesome.scss" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/plugin/font-awesome/scss/font-awesome.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/view/account.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/项目记录.md" beforeDir="false" afterPath="$PROJECT_DIR$/项目记录.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -118,8 +941,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -141,23 +965,28 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/templates/web/static/plugin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\PyProject\bug_manage\app01\templates" />
+      <recent name="D:\PyProject\bug_manage\web\templates" />
       <recent name="D:\PyProject\bug_manage\web\templates\web\static\plugin\bootstrap" />
       <recent name="D:\PyProject\bug_manage\web\templates\web\static\css" />
       <recent name="D:\PyProject\bug_manage\web\templates\web" />
-      <recent name="D:\PyProject\bug_manage\app01\templates\app01" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\PyProject\bug_manage\web" />
+      <recent name="D:\PyProject\bug_manage\web\templates\web\static\plugin\bootstrap\css" />
+      <recent name="D:\PyProject\bug_manage\web\templates\web\static\js" />
       <recent name="D:\PyProject\bug_manage\web\templates\web\static\plugin" />
       <recent name="D:\PyProject\bug_manage\bug_manage" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.redisConnect">
+  <component name="RunManager" selected="Django server.bug_manage">
     <configuration name="redisConnect" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="bug_manage" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -229,7 +1058,11 @@
       <workItem from="1641787162148" duration="151000" />
       <workItem from="1641985951225" duration="1644000" />
       <workItem from="1641987893276" duration="2587000" />
-      <workItem from="1641995701640" duration="4082000" />
+      <workItem from="1641995701640" duration="4725000" />
+      <workItem from="1642072732215" duration="5560000" />
+      <workItem from="1642081356428" duration="355000" />
+      <workItem from="1642081815669" duration="1435000" />
+      <workItem from="1642159259546" duration="5916000" />
     </task>
     <servers />
   </component>
@@ -240,30 +1073,30 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="549" y="166" key="FileChooserDialogImpl" timestamp="1641787312121">
+    <state x="549" y="166" key="FileChooserDialogImpl" timestamp="1642216020103">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="166" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1641787312121" />
-    <state width="1493" height="225" key="GridCell.Tab.0.bottom" timestamp="1641997832796">
+    <state x="549" y="166" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1642216020103" />
+    <state width="1493" height="225" key="GridCell.Tab.0.bottom" timestamp="1642217718500">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="225" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1641997832796" />
-    <state width="1493" height="225" key="GridCell.Tab.0.center" timestamp="1641997832796">
+    <state width="1493" height="225" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1642217718500" />
+    <state width="1493" height="225" key="GridCell.Tab.0.center" timestamp="1642217718500">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="225" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1641997832796" />
-    <state width="1493" height="225" key="GridCell.Tab.0.left" timestamp="1641997832796">
+    <state width="1493" height="225" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1642217718500" />
+    <state width="1493" height="225" key="GridCell.Tab.0.left" timestamp="1642217718499">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="225" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1641997832796" />
-    <state width="1493" height="225" key="GridCell.Tab.0.right" timestamp="1641997832796">
+    <state width="1493" height="225" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1642217718499" />
+    <state width="1493" height="225" key="GridCell.Tab.0.right" timestamp="1642217718500">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="225" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1641997832796" />
-    <state x="270" y="54" key="SettingsEditor" timestamp="1641990515004">
+    <state width="1493" height="225" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1642217718500" />
+    <state x="3" y="109" key="SettingsEditor" timestamp="1642077696827">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="270" y="54" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1641990515004" />
+    <state x="3" y="109" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1642077696827" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1641564840701">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
