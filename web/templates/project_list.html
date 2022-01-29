@@ -204,7 +204,7 @@
 
         function bindSubmit() {
             $('#btnSubmit').click(function () {
-
+//对话框不可以消失，要使用ajax
                 $.ajax({
                     url: "{% url 'project_list' %}",
                     type: "POST",
@@ -213,6 +213,7 @@
                     success: function (res) {
                         console.log(res);
                         if (res.status) {
+                            //页面刷新
                             location.href = location.href;
                             // location.reload()
                         } else {

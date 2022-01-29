@@ -12,7 +12,8 @@ class ProjectModelForm(BootStrapForm, forms.ModelForm):
     # desc = forms.CharField(widget=forms.Textarea(attrs={'xx': 123}))
     class Meta:
         model = models.Project
-        fields = ['name', 'color', 'desc']
+        fields = ['name', 'task_price','color', 'desc']
+        #重写插件CharField变Textarea
         widgets = {
             'desc': forms.Textarea
         }
@@ -24,10 +25,10 @@ class ProjectModelForm(BootStrapForm, forms.ModelForm):
     def clean_name(self):
         """ 项目校验 """
         name = self.cleaned_data['name']
-        # 1. 当前用户是否已创建过此项目(项目名是否已存在)？
-        exists = models.Project.objects.filter(name=name, creator=self.request.tracer.user).exists()
-        if exists:
-            raise ValidationError('项目名已存在')
+        # # 1. 当前用户是否已创建过此项目(项目名是否已存在)？
+        # exists = models.Project.objects.filter(name=name, creator=self.request.tracer.user).exists()
+        # if exists:
+        #     raise ValidationError('任务名已存在')
 
         # 2. 当前用户是否还有额度进行创建项目？
         # 最多创建N个项目
@@ -37,6 +38,6 @@ class ProjectModelForm(BootStrapForm, forms.ModelForm):
         count = models.Project.objects.filter(creator=self.request.tracer.user).count()
 
         if count >= self.request.tracer.price_policy.project_num:
-            raise ValidationError('项目个数超限，请购买套餐')
+            raise ValidationError('任务个数超限，请购买套餐')
 
         return name

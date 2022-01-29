@@ -2,36 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="648211ec-7dce-4708-97ce-c6cc2ebb8b85" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Monaco.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/base.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/init_price_policy.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/init_user.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/randomStr.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/画图.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/image_code.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/forms/bootstrap.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/forms/project.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/middleware/auth.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/migrations/0002_pricepolicy_project_projectuser_transaction.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/login_sms.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/project_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/widgets/radio.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/widgets/radio_option.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/views/home.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/views/project.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bug_manage/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/bug_manage/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/forms/account.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/forms/account.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/static/plugin/editor-md/languages/zh-tw.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/templates/layout/basic.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/layout/basic.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/templates/layout/manage.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/layout/manage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/views/account.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/views/account.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/项目记录.md" beforeDir="false" afterPath="$PROJECT_DIR$/项目记录.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/forms/project.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/forms/project.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/project_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/project_list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -328,7 +302,7 @@
       <workItem from="1643162809439" duration="3611000" />
       <workItem from="1643166434271" duration="16626000" />
       <workItem from="1643248393652" duration="8121000" />
-      <workItem from="1643459321354" duration="7851000" />
+      <workItem from="1643459321354" duration="9240000" />
     </task>
     <servers />
   </component>
@@ -359,26 +333,26 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="166" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1643257008901" />
-    <state width="746" height="146" key="GridCell.Tab.0.bottom" timestamp="1643466057812">
+    <state width="1493" height="146" key="GridCell.Tab.0.bottom" timestamp="1643467949422">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="143" key="GridCell.Tab.0.bottom/0.0.1536.824/-1804.254.1443.968@0.0.1536.824" timestamp="1643259065691" />
-    <state width="746" height="146" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1643466057812" />
-    <state width="746" height="146" key="GridCell.Tab.0.center" timestamp="1643466057812">
+    <state width="1493" height="146" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1643467949422" />
+    <state width="1493" height="146" key="GridCell.Tab.0.center" timestamp="1643467949422">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="143" key="GridCell.Tab.0.center/0.0.1536.824/-1804.254.1443.968@0.0.1536.824" timestamp="1643259065691" />
-    <state width="746" height="146" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1643466057812" />
-    <state width="746" height="146" key="GridCell.Tab.0.left" timestamp="1643466057811">
+    <state width="1493" height="146" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1643467949422" />
+    <state width="1493" height="146" key="GridCell.Tab.0.left" timestamp="1643467949422">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="143" key="GridCell.Tab.0.left/0.0.1536.824/-1804.254.1443.968@0.0.1536.824" timestamp="1643259065691" />
-    <state width="746" height="146" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1643466057811" />
-    <state width="746" height="146" key="GridCell.Tab.0.right" timestamp="1643466057812">
+    <state width="1493" height="146" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1643467949422" />
+    <state width="1493" height="146" key="GridCell.Tab.0.right" timestamp="1643467949422">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="143" key="GridCell.Tab.0.right/0.0.1536.824/-1804.254.1443.968@0.0.1536.824" timestamp="1643259065691" />
-    <state width="746" height="146" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1643466057812" />
+    <state width="1493" height="146" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1643467949422" />
     <state width="221" height="477" key="HiddenNamespacesPopup" timestamp="1643166248497">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
