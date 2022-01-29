@@ -49,6 +49,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'web.middleware.auth.AuthMiddleware',
 ]
 
 ROOT_URLCONF = 'bug_manage.urls'
@@ -150,6 +151,14 @@ CACHES = {
     }
 }
 
+# ########### 登录白名单：无需登录就可以访问的页面 ###########
+WHITE_REGEX_URL_LIST = [
+    "/register/",
+    "/send/sms/",
+    "/login/",
+    "/image/code/",
+    "/index/",
+]
 
 try:
     from.local_settings import *

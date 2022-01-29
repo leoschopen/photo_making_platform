@@ -1,0 +1,152 @@
+{% extends 'layout/basic.html' %}
+{% load static %}
+
+{% block title %} 用户短信登录 {% endblock %}
+
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/account.css' %}">
+    <style>
+        .error-msg {
+            color: #9e0013;
+            {#绝对定位，脱离文档流，不会将其他的组件冲下去#}
+            position: absolute;
+            font-size: 13px;
+        }
+    </style>
+{% endblock %}
+
+
+{% block content %}
+    <div class="account">
+        <div class="title">用户短信登录</div>
+        <form id="regForm" method="POST" novalidate>
+            {% csrf_token %}
+            {% for field in form %}
+                {% if field.name == 'code' %}
+                    <div class="form-group">
+                        <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                        <div class="row">
+                            <div class="col-xs-7">
+                                {{ field }}
+                                <span class="error-msg"></span>
+                            </div>
+                            <div class="col-xs-5">
+                                <input id="btnSms" type="button" class="btn btn-default" value="点击获取验证码">
+                            </div>
+                        </div>
+                    </div>
+                {% else %}
+                    <div class="form-group">
+                        <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                        {{ field }}
+                        <span class="error-msg"></span>
+                    </div>
+                {% endif %}
+            {% endfor %}
+            <div>
+                <div style="float: right;">
+                    <a href="{% url 'login' %}">用户名密码登录？</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-3">
+                    <input id="btnSubmit" type="button" class="btn btn-primary" value="登 录"/>
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}
+
+
+{% block js %}
+    <script>
+        // 页面框架加载完成之后自动执行函数
+        $(function () {
+            bindClickBtnSms();
+            bindClickSubmit();
+        });
+
+        /*
+        点击提交（登录）
+        */
+        function bindClickSubmit() {
+            $('#btnSubmit').click(function () {
+                $('.error-msg').empty();//每次清空
+                // 收集表单中的数据（找到每一个字段）$('#regForm').serialize()
+                // 数据ajax发送到后台
+                $.ajax({
+                    url: "{% url 'register' %}",
+                    type: "POST",
+                    data: $('#regForm').serialize(), // 一次性获取所有字段数据 + csrf token
+                    dataType: "JSON",
+                    success: function (res) {
+                        if(res.status){
+                            //view里面的：return JsonResponse({'status': True, 'data': '/login/'})#登录成功后，跳转目标地址
+                            location.href = res.data;
+                        }else{
+                            $.each(res.error, function (key, value) {
+                                //也是展示在页面的下面
+                                $("#id_" + key).next().text(value[0]);
+                            })
+                        }
+                    }
+                })
+            })
+        }
+
+        /*
+        点击获取验证码的按钮绑定事件
+         */
+        function bindClickBtnSms() {
+            $('#btnSms').click(function () {
+
+                $('.error-msg').empty();
+
+                // 获取用户输入的手机号
+                // 找到输入框的ID，根据ID获取值，如何找到手机号的那个ID？
+                var mobilePhone = $('#id_mobile_phone').val();
+
+                // 发送ajax请求，把手机号发送过去
+                $.ajax({
+                    url: "{% url 'send_sms' %}", // 等价于 /send/sms/
+                    type: "GET",
+                    data: {mobile_phone: mobilePhone, tpl: "login"},
+                    dataType: "JSON", // 将服务端返回的数据反序列化为字典
+                    success: function (res) {
+                        // ajax请求发送成功之后，自动执行的函数； res就是后端返回的值
+                        if (res.status) {
+                            sendSmsRemind();
+                        } else {
+                            // 错误信息
+                            // console.log(res); // {status:False, error:{ mobile_phone: ["错误信息"，],code: ["错误信息"，] }  }
+                            $.each(res.error, function (key, value) {
+                                $("#id_" + key).next().text(value[0]);
+                            })
+                        }
+                    }
+                })
+
+            })
+        }
+
+        /*
+        倒计时
+         */
+        function sendSmsRemind() {
+            var $smsBtn = $('#btnSms');
+            $smsBtn.prop('disabled', true); // 禁用
+            var time = 60;
+            var remind = setInterval(function () {
+                $smsBtn.val(time + '秒重新发送');
+                time = time - 1;
+                if (time < 1) {
+                    clearInterval(remind);
+                    $smsBtn.val('点击获取验证码').prop('disabled', false);
+                }
+            }, 1000)
+
+        }
+
+    </script>
+{% endblock %}

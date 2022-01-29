@@ -2,18 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="648211ec-7dce-4708-97ce-c6cc2ebb8b85" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app01/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app01/migrations/0002_alter_userinfo_username.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/encrypt.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Monaco.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/init_price_policy.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/init_user.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/randomStr.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/画图.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/image_code.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/forms/bootstrap.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/forms/project.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/middleware/auth.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/migrations/0002_pricepolicy_project_projectuser_transaction.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/templates/login_sms.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/templates/project_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/templates/widgets/radio.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/templates/widgets/radio_option.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/views/home.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/views/project.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app01/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/app01/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app01/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app01/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bug_manage/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/bug_manage/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/forms/account.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/forms/account.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/plugin/editor-md/languages/zh-tw.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/layout/basic.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/layout/basic.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/layout/manage.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/layout/manage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/views/account.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/views/account.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/项目记录.md" beforeDir="false" afterPath="$PROJECT_DIR$/项目记录.md" afterDir="false" />
@@ -37,6 +52,28 @@
     <expand>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="identifier.sqlite" type="feb32156:DbDataSourceImpl" />
       </path>
       <path>
@@ -53,14 +90,21 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="CSS File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/leoschopen/bug_manage.git" />
+      </set>
+    </option>
   </component>
   <component name="ProjectId" id="23KV6pZVRRpWptHAnbslqjo17Su" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -78,28 +122,117 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/web" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/scripts" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="restartRequiresConfirmation" value="false" />
+    <property name="run.code.analysis.last.selected.profile" value="aDefault" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\PyProject\bug_manage" />
+      <recent name="D:\PyProject\bug_manage\utils" />
       <recent name="D:\PyProject\bug_manage\app01\templates" />
       <recent name="D:\PyProject\bug_manage\web\templates" />
       <recent name="D:\PyProject\bug_manage\web\templates\web\static\plugin\bootstrap" />
-      <recent name="D:\PyProject\bug_manage\web\templates\web\static\css" />
-      <recent name="D:\PyProject\bug_manage\web\templates\web" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\PyProject\bug_manage\scripts" />
       <recent name="D:\PyProject\bug_manage\web" />
       <recent name="D:\PyProject\bug_manage\web\templates\web\static\plugin\bootstrap\css" />
       <recent name="D:\PyProject\bug_manage\web\templates\web\static\js" />
       <recent name="D:\PyProject\bug_manage\web\templates\web\static\plugin" />
-      <recent name="D:\PyProject\bug_manage\bug_manage" />
     </key>
   </component>
   <component name="RunManager" selected="Django server.bug_manage">
+    <configuration name="画图" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="bug_manage" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/画图.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="image_code" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="bug_manage" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="D:\PyProject\bug_manage\utils\image_code.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="init_price_policy" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="bug_manage" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/init_price_policy.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="init_user" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="bug_manage" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/init_user.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="redisConnect" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="bug_manage" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -139,7 +272,7 @@
       <option name="port" value="8000" />
       <option name="host" value="" />
       <option name="additionalOptions" value="" />
-      <option name="browserUrl" value="http://127.0.0.1:8000/register" />
+      <option name="browserUrl" value="http://127.0.0.1:8000/index" />
       <option name="runTestServer" value="false" />
       <option name="runNoReload" value="false" />
       <option name="useCustomRunCommand" value="false" />
@@ -149,9 +282,17 @@
     <list>
       <item itemvalue="Django server.bug_manage" />
       <item itemvalue="Python.redisConnect" />
+      <item itemvalue="Python.画图" />
+      <item itemvalue="Python.image_code" />
+      <item itemvalue="Python.init_user" />
+      <item itemvalue="Python.init_price_policy" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.init_price_policy" />
+        <item itemvalue="Python.init_user" />
+        <item itemvalue="Python.image_code" />
+        <item itemvalue="Python.画图" />
         <item itemvalue="Python.redisConnect" />
       </list>
     </recent_temporary>
@@ -185,7 +326,9 @@
       <workItem from="1642735080710" duration="3774000" />
       <workItem from="1642854630594" duration="6312000" />
       <workItem from="1643162809439" duration="3611000" />
-      <workItem from="1643166434271" duration="1474000" />
+      <workItem from="1643166434271" duration="16626000" />
+      <workItem from="1643248393652" duration="8121000" />
+      <workItem from="1643459321354" duration="7851000" />
     </task>
     <servers />
   </component>
@@ -196,56 +339,73 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1643167554561">
+    <state x="361" y="71" key="#JSHint" timestamp="1643189504905">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1643167554561" />
+    <state x="361" y="71" key="#JSHint/0.0.1536.824@0.0.1536.824" timestamp="1643189504905" />
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1643250933276">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1643250933276" />
+    <state x="511" y="267" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1643170490626">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="511" y="267" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1536.824@0.0.1536.824" timestamp="1643170490626" />
     <state width="254" height="195" key="DatabaseViewActions_Filter" timestamp="1643165997188">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="254" height="195" key="DatabaseViewActions_Filter/0.0.1536.824@0.0.1536.824" timestamp="1643165997188" />
-    <state x="549" y="166" key="FileChooserDialogImpl" timestamp="1642216020103">
+    <state x="549" y="166" key="FileChooserDialogImpl" timestamp="1643257008901">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="166" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1642216020103" />
-    <state width="1493" height="143" key="GridCell.Tab.0.bottom" timestamp="1643166422704">
+    <state x="549" y="166" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1643257008901" />
+    <state width="746" height="146" key="GridCell.Tab.0.bottom" timestamp="1643466057812">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="143" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1643166422704" />
-    <state width="1493" height="143" key="GridCell.Tab.0.center" timestamp="1643166422704">
+    <state width="1493" height="143" key="GridCell.Tab.0.bottom/0.0.1536.824/-1804.254.1443.968@0.0.1536.824" timestamp="1643259065691" />
+    <state width="746" height="146" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1643466057812" />
+    <state width="746" height="146" key="GridCell.Tab.0.center" timestamp="1643466057812">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="143" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1643166422704" />
-    <state width="1493" height="143" key="GridCell.Tab.0.left" timestamp="1643166422704">
+    <state width="1493" height="143" key="GridCell.Tab.0.center/0.0.1536.824/-1804.254.1443.968@0.0.1536.824" timestamp="1643259065691" />
+    <state width="746" height="146" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1643466057812" />
+    <state width="746" height="146" key="GridCell.Tab.0.left" timestamp="1643466057811">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="143" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1643166422704" />
-    <state width="1493" height="143" key="GridCell.Tab.0.right" timestamp="1643166422704">
+    <state width="1493" height="143" key="GridCell.Tab.0.left/0.0.1536.824/-1804.254.1443.968@0.0.1536.824" timestamp="1643259065691" />
+    <state width="746" height="146" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1643466057811" />
+    <state width="746" height="146" key="GridCell.Tab.0.right" timestamp="1643466057812">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="143" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1643166422704" />
+    <state width="1493" height="143" key="GridCell.Tab.0.right/0.0.1536.824/-1804.254.1443.968@0.0.1536.824" timestamp="1643259065691" />
+    <state width="746" height="146" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1643466057812" />
     <state width="221" height="477" key="HiddenNamespacesPopup" timestamp="1643166248497">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="221" height="477" key="HiddenNamespacesPopup/0.0.1536.824@0.0.1536.824" timestamp="1643166248497" />
-    <state x="3" y="109" key="SettingsEditor" timestamp="1643164465719">
+    <state x="3" y="109" key="SettingsEditor" timestamp="1643191599938">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="3" y="109" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1643164465719" />
+    <state x="3" y="109" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1643191599938" />
     <state x="523" y="166" key="com.intellij.database.run.ParametersPanel.Standalone" timestamp="1643167111012">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="523" y="166" key="com.intellij.database.run.ParametersPanel.Standalone/0.0.1536.824@0.0.1536.824" timestamp="1643167111012" />
-    <state x="447" y="145" width="642" height="534" key="find.popup" timestamp="1642607438739">
+    <state x="447" y="145" width="642" height="534" key="find.popup" timestamp="1643258965855">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="447" y="145" width="642" height="534" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1642607438739" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1641564840701">
+    <state x="447" y="145" width="642" height="534" key="find.popup/0.0.1536.824/-1804.254.1443.968@0.0.1536.824" timestamp="1643258965855" />
+    <state x="447" y="145" width="642" height="534" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1643250732369" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1643202509195">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1641564840701" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1643202509195" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/bug_manage$init_user.coverage" NAME="init_user Coverage Results" MODIFIED="1643259740051" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
     <SUITE FILE_PATH="coverage/bug_manage$redisConnect.coverage" NAME="redisConnect Coverage Results" MODIFIED="1641997602137" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app01/try" />
+    <SUITE FILE_PATH="coverage/bug_manage$image_code.coverage" NAME="image_code Coverage Results" MODIFIED="1643196672707" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
+    <SUITE FILE_PATH="coverage/bug_manage$.coverage" NAME="画图 Coverage Results" MODIFIED="1643191911083" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
+    <SUITE FILE_PATH="coverage/bug_manage$init_price_policy.coverage" NAME="init_price_policy Coverage Results" MODIFIED="1643462046278" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
   </component>
 </project>
