@@ -54,13 +54,13 @@ class Transaction(models.Model):
 class Project(models.Model):
     """ 任务表 """
     COLOR_CHOICES = (
-        (1, "#56b8eb"),  # 56b8eb
-        (2, "#f28033"),  # f28033
-        (3, "#ebc656"),  # ebc656
-        (4, "#a2d148"),  # a2d148
-        (5, "#20BFA4"),  # #20BFA4
-        (6, "#7461c2"),  # 7461c2,
-        (7, "#20bfa3"),  # 20bfa3,
+        (1, "#403137"),  # 56b8eb
+        (2, "#314F49"),  # f28033
+        (3, "#82501E"),  # ebc656
+        (4, "#A35229"),  # a2d148
+        (5, "#0D4E73"),  # #20BFA4
+        (6, "#4B7A95"),  # 7461c2,
+        (7, "#E87A68"),  # 20bfa3,
     )
 
     name = models.CharField(verbose_name='任务名', max_length=32)

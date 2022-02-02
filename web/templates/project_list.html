@@ -169,7 +169,7 @@
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                             aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">新建任务</h4>
+                    <h4 class="modal-title" id="myModalLabel">新建项目</h4>
                 </div>
                 <div class="modal-body">
 
@@ -204,7 +204,7 @@
 
         function bindSubmit() {
             $('#btnSubmit').click(function () {
-//对话框不可以消失，要使用ajax
+
                 $.ajax({
                     url: "{% url 'project_list' %}",
                     type: "POST",
@@ -213,7 +213,6 @@
                     success: function (res) {
                         console.log(res);
                         if (res.status) {
-                            //页面刷新
                             location.href = location.href;
                             // location.reload()
                         } else {

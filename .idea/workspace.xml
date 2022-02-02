@@ -2,10 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="648211ec-7dce-4708-97ce-c6cc2ebb8b85" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/web/forms/widgets.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/templates/inclusion/all_project_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/templatetags/project.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/init_user.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/init_user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/forms/bootstrap.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/forms/bootstrap.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/forms/project.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/forms/project.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/layout/manage.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/layout/manage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/templates/project_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/project_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/widgets/radio.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/widgets/color-radio/radio.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/widgets/radio_option.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/widgets/color-radio/radio_option.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/views/project.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/views/project.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,19 +114,19 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\PyProject\bug_manage" />
-      <recent name="D:\PyProject\bug_manage\utils" />
-      <recent name="D:\PyProject\bug_manage\app01\templates" />
-      <recent name="D:\PyProject\bug_manage\web\templates" />
-      <recent name="D:\PyProject\bug_manage\web\templates\web\static\plugin\bootstrap" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\PyProject\bug_manage\scripts" />
       <recent name="D:\PyProject\bug_manage\web" />
       <recent name="D:\PyProject\bug_manage\web\templates\web\static\plugin\bootstrap\css" />
       <recent name="D:\PyProject\bug_manage\web\templates\web\static\js" />
       <recent name="D:\PyProject\bug_manage\web\templates\web\static\plugin" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\PyProject\bug_manage\web\templates\widgets\color_radio" />
+      <recent name="D:\PyProject\bug_manage" />
+      <recent name="D:\PyProject\bug_manage\utils" />
+      <recent name="D:\PyProject\bug_manage\app01\templates" />
+      <recent name="D:\PyProject\bug_manage\web\templates" />
     </key>
   </component>
   <component name="RunManager" selected="Django server.bug_manage">
@@ -263,8 +274,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.init_price_policy" />
         <item itemvalue="Python.init_user" />
+        <item itemvalue="Python.init_price_policy" />
         <item itemvalue="Python.image_code" />
         <item itemvalue="Python.画图" />
         <item itemvalue="Python.redisConnect" />
@@ -302,7 +313,8 @@
       <workItem from="1643162809439" duration="3611000" />
       <workItem from="1643166434271" duration="16626000" />
       <workItem from="1643248393652" duration="8121000" />
-      <workItem from="1643459321354" duration="9240000" />
+      <workItem from="1643459321354" duration="9384000" />
+      <workItem from="1643599756514" duration="11516000" />
     </task>
     <servers />
   </component>
@@ -333,26 +345,26 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="166" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1643257008901" />
-    <state width="1493" height="146" key="GridCell.Tab.0.bottom" timestamp="1643467949422">
+    <state width="1493" height="146" key="GridCell.Tab.0.bottom" timestamp="1643687435546">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="143" key="GridCell.Tab.0.bottom/0.0.1536.824/-1804.254.1443.968@0.0.1536.824" timestamp="1643259065691" />
-    <state width="1493" height="146" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1643467949422" />
-    <state width="1493" height="146" key="GridCell.Tab.0.center" timestamp="1643467949422">
+    <state width="1493" height="146" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1643687435546" />
+    <state width="1493" height="146" key="GridCell.Tab.0.center" timestamp="1643687435546">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="143" key="GridCell.Tab.0.center/0.0.1536.824/-1804.254.1443.968@0.0.1536.824" timestamp="1643259065691" />
-    <state width="1493" height="146" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1643467949422" />
-    <state width="1493" height="146" key="GridCell.Tab.0.left" timestamp="1643467949422">
+    <state width="1493" height="146" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1643687435546" />
+    <state width="1493" height="146" key="GridCell.Tab.0.left" timestamp="1643687435546">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="143" key="GridCell.Tab.0.left/0.0.1536.824/-1804.254.1443.968@0.0.1536.824" timestamp="1643259065691" />
-    <state width="1493" height="146" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1643467949422" />
-    <state width="1493" height="146" key="GridCell.Tab.0.right" timestamp="1643467949422">
+    <state width="1493" height="146" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1643687435546" />
+    <state width="1493" height="146" key="GridCell.Tab.0.right" timestamp="1643687435546">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="143" key="GridCell.Tab.0.right/0.0.1536.824/-1804.254.1443.968@0.0.1536.824" timestamp="1643259065691" />
-    <state width="1493" height="146" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1643467949422" />
+    <state width="1493" height="146" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1643687435546" />
     <state width="221" height="477" key="HiddenNamespacesPopup" timestamp="1643166248497">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -361,22 +373,26 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="3" y="109" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1643191599938" />
+    <state x="499" y="217" key="com.intellij.database.dbimport.ImportUtil.MyDialog" timestamp="1643619371947">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="217" key="com.intellij.database.dbimport.ImportUtil.MyDialog/0.0.1536.824@0.0.1536.824" timestamp="1643619371947" />
     <state x="523" y="166" key="com.intellij.database.run.ParametersPanel.Standalone" timestamp="1643167111012">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="523" y="166" key="com.intellij.database.run.ParametersPanel.Standalone/0.0.1536.824@0.0.1536.824" timestamp="1643167111012" />
-    <state x="447" y="145" width="642" height="534" key="find.popup" timestamp="1643258965855">
+    <state x="447" y="145" width="642" height="534" key="find.popup" timestamp="1643685225175">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="447" y="145" width="642" height="534" key="find.popup/0.0.1536.824/-1804.254.1443.968@0.0.1536.824" timestamp="1643258965855" />
-    <state x="447" y="145" width="642" height="534" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1643250732369" />
+    <state x="447" y="145" width="642" height="534" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1643685225175" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1643202509195">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1643202509195" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/bug_manage$init_user.coverage" NAME="init_user Coverage Results" MODIFIED="1643259740051" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
+    <SUITE FILE_PATH="coverage/bug_manage$init_user.coverage" NAME="init_user Coverage Results" MODIFIED="1643621119710" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
     <SUITE FILE_PATH="coverage/bug_manage$redisConnect.coverage" NAME="redisConnect Coverage Results" MODIFIED="1641997602137" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app01/try" />
     <SUITE FILE_PATH="coverage/bug_manage$image_code.coverage" NAME="image_code Coverage Results" MODIFIED="1643196672707" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
     <SUITE FILE_PATH="coverage/bug_manage$.coverage" NAME="画图 Coverage Results" MODIFIED="1643191911083" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
