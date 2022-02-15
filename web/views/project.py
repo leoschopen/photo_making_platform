@@ -1,34 +1,41 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
-from django.shortcuts import render, redirect
-from django.http import JsonResponse, HttpResponse
+import time
+from django.shortcuts import render, HttpResponse, redirect
+from django.http import JsonResponse
+from xpinyin import Pinyin
 
-from web import models
 from web.forms.project import ProjectModelForm
+from web import models
+
+from utils.tencent.cos import create_bucket
 
 
 def project_list(request):
     """ 项目列表 """
-    #get请求获取所有项目列表
     if request.method == "GET":
+        # GET请求查看项目列表
         """
-        从数据库中获取：（都分为已经星标和未星标）
-        1. 我创建
-        2. 我参与
+        1. 从数据库中获取两部分数据
+            我创建的所有项目：已星标、未星标
+            我参与的所有项目：已星标、未星标
+        2. 提取已星标
+            列表 = 循环 [我创建的所有项目] + [我参与的所有项目] 把已星标的数据提取
+
+        得到三个列表：星标、创建、参与
         """
         project_dict = {'star': [], 'my': [], 'join': []}
-        #查询的是项目表
+
         my_project_list = models.Project.objects.filter(creator=request.tracer.user)
         for row in my_project_list:
             if row.star:
                 project_dict['star'].append({"value": row, 'type': 'my'})
             else:
                 project_dict['my'].append(row)
-        #查询的是项目参与者表
+
         join_project_list = models.ProjectUser.objects.filter(user=request.tracer.user)
         for item in join_project_list:
             if item.star:
-                #star中都是project对象
                 project_dict['star'].append({"value": item.project, 'type': 'join'})
             else:
                 project_dict['join'].append(item.project)
@@ -36,10 +43,20 @@ def project_list(request):
         form = ProjectModelForm(request)
         return render(request, 'project_list.html', {'form': form, 'project_dict': project_dict})
 
-    # post请求，ajax提交并创建
+    # POST，对话框的ajax添加项目。
     form = ProjectModelForm(request, data=request.POST)
     if form.is_valid():
-        # 验证通过：项目名、颜色、描述 + creator谁创建的项目？
+        name = form.cleaned_data['name']
+        p = Pinyin()
+        name_pinyin = p.get_pinyin(name)
+        # 1. 为项目创建一个桶
+        bucket = "{}-{}-{}-1301633315".format(name_pinyin,request.tracer.user.mobile_phone, str(int(time.time())))
+        region = 'ap-chongqing'
+        create_bucket(bucket, region)
+
+        # 验证通过：项目名、颜色、描述 + creator谁创建的项目？instance为当前的modelform对象
+        form.instance.bucket = bucket
+        form.instance.region = region
         form.instance.creator = request.tracer.user
         # 创建项目
         form.save()
@@ -64,7 +81,6 @@ def project_star(request, project_type, project_id):
 def project_unstar(request, project_type, project_id):
     """ 取消星标 """
     if project_type == 'my':
-        #保证这个项目是我创建的我才能更新creator=request.tracer.user
         models.Project.objects.filter(id=project_id, creator=request.tracer.user).update(star=False)
         return redirect('project_list')
 

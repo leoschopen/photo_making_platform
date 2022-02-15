@@ -92,7 +92,7 @@
             <div class="panel-body">
                 {% for item in project_dict.star %}
                     <div class="item">
-                        <a href="#" class="title"
+                        <a href="{% url 'dashboard' project_id=item.value.id %}" class="title"
                            style="background-color: {{ item.value.get_color_display }};">{{ item.value.name }}</a>
                         <div class="info">
                             <div>
@@ -116,7 +116,7 @@
             <div class="panel-body">
                 {% for item in project_dict.my %}
                     <div class="item">
-                        <a href="#" class="title"
+                        <a href="{% url 'dashboard' project_id=item.id %}" class="title"
                            style="background-color: {{ item.get_color_display }};">{{ item.name }}</a>
                         <div class="info">
                             <div>
@@ -140,7 +140,7 @@
             <div class="panel-body">
                 {% for item in project_dict.join %}
                     <div class="item">
-                        <a href="#" class="title"
+                        <a href="{% url 'dashboard' project_id=item.id %}" class="title"
                            style="background-color: {{ item.get_color_display }};">{{ item.name }}</a>
                         <div class="info">
                             <div>

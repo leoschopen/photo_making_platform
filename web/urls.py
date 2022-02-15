@@ -2,7 +2,7 @@
 # -*- coding:utf-8 -*-
 
 from django.conf.urls import url, include
-from web.views import account, home, project
+from web.views import account, home, project, manage, file
 
 urlpatterns = [
     url(r'^register/$', account.register, name='register'),  # register
@@ -19,5 +19,19 @@ urlpatterns = [
     # /project/star/join/1
     url(r'^project/star/(?P<project_type>\w+)/(?P<project_id>\d+)/$', project.project_star, name='project_star'),
     url(r'^project/unstar/(?P<project_type>\w+)/(?P<project_id>\d+)/$', project.project_unstar, name='project_unstar'),
+
+    url(r'^manage/(?P<project_id>\d+)/', include([
+        url(r'^dashboard/$', manage.dashboard, name='dashboard'),
+        url(r'^issues/$', manage.issues, name='issues'),
+        url(r'^statistics/$', manage.statistics, name='statistics'),
+
+        url(r'^file/$', file.file, name='file'),
+        url(r'^file/delete/$', file.file_delete, name='file_delete'),
+        url(r'^cos/credential/$', file.cos_credential, name='cos_credential'),
+        url(r'^file/post/$', file.file_post, name='file_post'),
+        url(r'^file/download/(?P<file_id>\d+)/$', file.file_download, name='file_download'),
+
+        url(r'^setting/$', manage.setting, name='setting'),
+    ], None, None)),
 ]
 

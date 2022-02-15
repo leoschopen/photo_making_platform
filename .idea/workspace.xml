@@ -2,21 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="648211ec-7dce-4708-97ce-c6cc2ebb8b85" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/web/forms/widgets.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/inclusion/all_project_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templatetags/project.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/cos_upload_demo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/tencent/cos.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/forms/file.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/migrations/0003_auto_20220202_1115.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/migrations/0004_filerepository.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/migrations/0005_auto_20220209_2150.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/css/manage.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/templates/dashboard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/templates/file.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/templates/inclusion/manage_menu_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/templates/issues.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/templates/setting.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/templates/statistics.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/views/file.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/views/manage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/init_user.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/init_user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/forms/bootstrap.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/forms/bootstrap.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/forms/project.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/forms/project.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/middleware/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/middleware/auth.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/inclusion/all_project_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/inclusion/all_project_list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/templates/layout/manage.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/layout/manage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/templates/project_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/project_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/templates/widgets/radio.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/widgets/color-radio/radio.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/templates/widgets/radio_option.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/widgets/color-radio/radio_option.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templatetags/project.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/templatetags/project.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/views/project.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/views/project.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/项目记录.md" beforeDir="false" afterPath="$PROJECT_DIR$/项目记录.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,9 +87,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="CSS File" />
         <option value="Python Script" />
-        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -152,6 +164,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="cos_upload_demo" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="bug_manage" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/cos_upload_demo.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="image_code" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="bug_manage" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -218,28 +252,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="redisConnect" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="bug_manage" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/app01/try" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app01/try/redisConnect.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="bug_manage" type="Python.DjangoServer" factoryName="Django server">
       <module name="bug_manage" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -266,19 +278,19 @@
     </configuration>
     <list>
       <item itemvalue="Django server.bug_manage" />
-      <item itemvalue="Python.redisConnect" />
       <item itemvalue="Python.画图" />
       <item itemvalue="Python.image_code" />
       <item itemvalue="Python.init_user" />
       <item itemvalue="Python.init_price_policy" />
+      <item itemvalue="Python.cos_upload_demo" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.cos_upload_demo" />
         <item itemvalue="Python.init_user" />
         <item itemvalue="Python.init_price_policy" />
         <item itemvalue="Python.image_code" />
         <item itemvalue="Python.画图" />
-        <item itemvalue="Python.redisConnect" />
       </list>
     </recent_temporary>
   </component>
@@ -314,7 +326,13 @@
       <workItem from="1643166434271" duration="16626000" />
       <workItem from="1643248393652" duration="8121000" />
       <workItem from="1643459321354" duration="9384000" />
-      <workItem from="1643599756514" duration="11516000" />
+      <workItem from="1643599756514" duration="18138000" />
+      <workItem from="1643856697788" duration="4489000" />
+      <workItem from="1644199496135" duration="671000" />
+      <workItem from="1644327793177" duration="2312000" />
+      <workItem from="1644414392025" duration="3009000" />
+      <workItem from="1644586085004" duration="11866000" />
+      <workItem from="1644890644156" duration="1897000" />
     </task>
     <servers />
   </component>
@@ -333,6 +351,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1643250933276" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1643891458568">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1643891458568" />
     <state x="511" y="267" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1643170490626">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -345,30 +367,50 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="166" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1643257008901" />
-    <state width="1493" height="146" key="GridCell.Tab.0.bottom" timestamp="1643687435546">
+    <state width="1493" height="155" key="GridCell.Tab.0.bottom" timestamp="1644892663702">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="143" key="GridCell.Tab.0.bottom/0.0.1536.824/-1804.254.1443.968@0.0.1536.824" timestamp="1643259065691" />
-    <state width="1493" height="146" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1643687435546" />
-    <state width="1493" height="146" key="GridCell.Tab.0.center" timestamp="1643687435546">
+    <state width="1493" height="155" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1644892663702" />
+    <state width="1493" height="155" key="GridCell.Tab.0.center" timestamp="1644892663702">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="143" key="GridCell.Tab.0.center/0.0.1536.824/-1804.254.1443.968@0.0.1536.824" timestamp="1643259065691" />
-    <state width="1493" height="146" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1643687435546" />
-    <state width="1493" height="146" key="GridCell.Tab.0.left" timestamp="1643687435546">
+    <state width="1493" height="155" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1644892663702" />
+    <state width="1493" height="155" key="GridCell.Tab.0.left" timestamp="1644892663701">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="143" key="GridCell.Tab.0.left/0.0.1536.824/-1804.254.1443.968@0.0.1536.824" timestamp="1643259065691" />
-    <state width="1493" height="146" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1643687435546" />
-    <state width="1493" height="146" key="GridCell.Tab.0.right" timestamp="1643687435546">
+    <state width="1493" height="155" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1644892663701" />
+    <state width="1493" height="155" key="GridCell.Tab.0.right" timestamp="1644892663702">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="143" key="GridCell.Tab.0.right/0.0.1536.824/-1804.254.1443.968@0.0.1536.824" timestamp="1643259065691" />
-    <state width="1493" height="146" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1643687435546" />
+    <state width="1493" height="155" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1644892663702" />
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1644892102307">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1644892102307" />
+    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1644892102306">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1644892102306" />
+    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1644892102306">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1644892102306" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1644892102306">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1644892102306" />
     <state width="221" height="477" key="HiddenNamespacesPopup" timestamp="1643166248497">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="221" height="477" key="HiddenNamespacesPopup/0.0.1536.824@0.0.1536.824" timestamp="1643166248497" />
+    <state x="586" y="134" key="RollbackChangesDialog" timestamp="1644594244369">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="586" y="134" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1644594244369" />
     <state x="3" y="109" key="SettingsEditor" timestamp="1643191599938">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -381,19 +423,24 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="523" y="166" key="com.intellij.database.run.ParametersPanel.Standalone/0.0.1536.824@0.0.1536.824" timestamp="1643167111012" />
-    <state x="447" y="145" width="642" height="534" key="find.popup" timestamp="1643685225175">
+    <state x="562" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1644594219513">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="562" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1644594219513" />
+    <state x="447" y="145" width="642" height="534" key="find.popup" timestamp="1644637693702">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="447" y="145" width="642" height="534" key="find.popup/0.0.1536.824/-1804.254.1443.968@0.0.1536.824" timestamp="1643258965855" />
-    <state x="447" y="145" width="642" height="534" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1643685225175" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1643202509195">
+    <state x="447" y="145" width="642" height="534" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1644637693702" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1644329614663">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1643202509195" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1644329614663" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/bug_manage$init_user.coverage" NAME="init_user Coverage Results" MODIFIED="1643621119710" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
     <SUITE FILE_PATH="coverage/bug_manage$redisConnect.coverage" NAME="redisConnect Coverage Results" MODIFIED="1641997602137" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app01/try" />
+    <SUITE FILE_PATH="coverage/bug_manage$cos_upload_demo.coverage" NAME="cos_upload_demo Coverage Results" MODIFIED="1644593180282" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
     <SUITE FILE_PATH="coverage/bug_manage$image_code.coverage" NAME="image_code Coverage Results" MODIFIED="1643196672707" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
     <SUITE FILE_PATH="coverage/bug_manage$.coverage" NAME="画图 Coverage Results" MODIFIED="1643191911083" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
     <SUITE FILE_PATH="coverage/bug_manage$init_price_policy.coverage" NAME="init_price_policy Coverage Results" MODIFIED="1643462046278" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />

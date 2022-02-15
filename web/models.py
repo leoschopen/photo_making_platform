@@ -74,6 +74,9 @@ class Project(models.Model):
     creator = models.ForeignKey(verbose_name='创建者', to='UserInfo',on_delete=models.CASCADE)
     create_datetime = models.DateTimeField(verbose_name='创建时间', auto_now_add=True)
 
+    bucket = models.CharField(verbose_name='cos桶', max_length=128)
+    region = models.CharField(verbose_name='cos区域', max_length=32)
+
 
 class ProjectUser(models.Model):
     """ 任务领取者 """
@@ -82,3 +85,25 @@ class ProjectUser(models.Model):
     star = models.BooleanField(verbose_name='星标', default=False)
 
     create_datetime = models.DateTimeField(verbose_name='加入时间', auto_now_add=True)
+
+class FileRepository(models.Model):
+    """ 文件库 """
+    project = models.ForeignKey(verbose_name='项目', to='Project')
+    file_type_choices = (
+        (1, '文件'),
+        (2, '文件夹')
+    )
+    file_type = models.SmallIntegerField(verbose_name='类型', choices=file_type_choices)
+    name = models.CharField(verbose_name='文件夹名称', max_length=32, help_text="文件/文件夹名")
+    key = models.CharField(verbose_name='文件储存在COS中的KEY', max_length=128, null=True, blank=True)
+    file_size = models.IntegerField(verbose_name='文件大小', null=True, blank=True)
+    file_path = models.CharField(verbose_name='文件路径', max_length=255, null=True,
+                                 blank=True)  # https://桶.cos.ap-chengdu/....
+
+    parent = models.ForeignKey(verbose_name='父级目录', to='self', related_name='child', null=True, blank=True)
+
+    update_user = models.ForeignKey(verbose_name='最近更新者', to='UserInfo')
+    update_datetime = models.DateTimeField(verbose_name='更新时间', auto_now=True)
+
+
+

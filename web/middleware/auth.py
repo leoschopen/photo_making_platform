@@ -13,6 +13,7 @@ class Tracer(object):
     def __init__(self):
         self.user = None
         self.price_policy = None
+        self.project = None
 
 
 class AuthMiddleware(MiddlewareMixin):
@@ -42,14 +43,13 @@ class AuthMiddleware(MiddlewareMixin):
 
         # 方式一：免费额度在交易记录中存储
 
-        # 获取当前用户ID值最大（id最大即最近交易记录）
+        # 获取当前用户ID值最大（最近交易记录）
         _object = models.Transaction.objects.filter(user=user_object, status=2).order_by('-id').first()
         # 判断是否已过期
         current_datetime = datetime.datetime.now()
-        #end_datetime为空即免费版
         if _object.end_datetime and _object.end_datetime < current_datetime:
             _object = models.Transaction.objects.filter(user=user_object, status=2, price_policy__category=1).first()
-#将当前登录用户的购买套餐信息放在reques中
+
         request.tracer.price_policy = _object.price_policy
 
         # 方式二：免费的额度存储配置文件
@@ -68,3 +68,26 @@ class AuthMiddleware(MiddlewareMixin):
             else:
                 request.price_policy = _object.price_policy
         """
+
+    def process_view(self, request, view, args, kwargs):
+
+        # 判断URL是否是以manage开头，如果是则判断项目ID是否是我创建 or 参与
+        if not request.path_info.startswith('/manage/'):
+            return
+
+        project_id = kwargs.get('project_id')
+        # 是否是我创建的
+        project_object = models.Project.objects.filter(creator=request.tracer.user, id=project_id).first()
+        if project_object:
+            # 是我创建的项目的话，我就让他通过
+            request.tracer.project = project_object
+            return
+
+        # 是否是我参与的项目
+        project_user_object = models.ProjectUser.objects.filter(user=request.tracer.user, project_id=project_id).first()
+        if project_user_object:
+            # 是我参与的项目
+            request.tracer.project = project_user_object.project
+            return
+
+        return redirect('project_list')
