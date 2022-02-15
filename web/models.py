@@ -2,12 +2,13 @@ from django.db import models
 
 
 class UserInfo(models.Model):
-    username = models.CharField(verbose_name='用户名', max_length=32, db_index=True) # db_index=True 索引
+    username = models.CharField(verbose_name='用户名', max_length=32, db_index=True)  # db_index=True 索引
     email = models.EmailField(verbose_name='邮箱', max_length=32)
     mobile_phone = models.CharField(verbose_name='手机号', max_length=32)
     password = models.CharField(verbose_name='密码', max_length=32)
-    #注册成功默认为空，如果购买套餐后将policy放在这里，以免后面进行对支付记录进行排序
+    # 注册成功默认为空，如果购买套餐后将policy放在这里，以免后面进行对支付记录进行排序
     # price_policy = models.ForeignKey(verbose_name='价格策略', to='PricePolicy', null=True, blank=True)
+
 
 class PricePolicy(models.Model):
     """ 价格策略 """
@@ -38,8 +39,8 @@ class Transaction(models.Model):
 
     order = models.CharField(verbose_name='订单号', max_length=64, unique=True)  # 唯一索引
 
-    user = models.ForeignKey(verbose_name='用户', to='UserInfo',on_delete=models.CASCADE)
-    price_policy = models.ForeignKey(verbose_name='价格策略', to='PricePolicy',on_delete=models.CASCADE)
+    user = models.ForeignKey(verbose_name='用户', to='UserInfo', on_delete=models.CASCADE)
+    price_policy = models.ForeignKey(verbose_name='价格策略', to='PricePolicy', on_delete=models.CASCADE)
 
     count = models.IntegerField(verbose_name='数量（年）', help_text='0表示无限期')
 
@@ -71,7 +72,7 @@ class Project(models.Model):
     star = models.BooleanField(verbose_name='星标', default=False)
 
     join_count = models.SmallIntegerField(verbose_name='参与人数', default=1)
-    creator = models.ForeignKey(verbose_name='创建者', to='UserInfo',on_delete=models.CASCADE)
+    creator = models.ForeignKey(verbose_name='创建者', to='UserInfo', on_delete=models.CASCADE)
     create_datetime = models.DateTimeField(verbose_name='创建时间', auto_now_add=True)
 
     bucket = models.CharField(verbose_name='cos桶', max_length=128)
@@ -80,11 +81,12 @@ class Project(models.Model):
 
 class ProjectUser(models.Model):
     """ 任务领取者 """
-    user = models.ForeignKey(verbose_name='领取任务者', to='UserInfo',on_delete=models.CASCADE)
-    project = models.ForeignKey(verbose_name='任务', to='Project',on_delete=models.CASCADE)
+    user = models.ForeignKey(verbose_name='领取任务者', to='UserInfo', on_delete=models.CASCADE)
+    project = models.ForeignKey(verbose_name='任务', to='Project', on_delete=models.CASCADE)
     star = models.BooleanField(verbose_name='星标', default=False)
 
     create_datetime = models.DateTimeField(verbose_name='加入时间', auto_now_add=True)
+
 
 class FileRepository(models.Model):
     """ 文件库 """
@@ -106,4 +108,80 @@ class FileRepository(models.Model):
     update_datetime = models.DateTimeField(verbose_name='更新时间', auto_now=True)
 
 
+class Issues(models.Model):
+    """ 问题 """
+    project = models.ForeignKey(verbose_name='项目', to='Project')
+    module = models.ForeignKey(verbose_name='阶段', to='Module', null=True, blank=True)
 
+    subject = models.CharField(verbose_name='主题', max_length=80)
+    desc = models.TextField(verbose_name='问题描述')
+    priority_choices = (
+        ("danger", "高"),
+        ("warning", "中"),
+        ("success", "低"),
+    )
+    priority = models.CharField(verbose_name='优先级', max_length=12, choices=priority_choices, default='danger')
+
+    # 新建、处理中、已解决、已忽略、待反馈、已关闭、重新打开
+    status_choices = (
+        (1, '新建'),
+        (2, '处理中'),
+        (3, '已解决'),
+        (4, '已忽略'),
+        (5, '待反馈'),
+        (6, '已关闭'),
+        (7, '重新打开'),
+    )
+    status = models.SmallIntegerField(verbose_name='状态', choices=status_choices, default=1)
+
+    assign = models.ForeignKey(verbose_name='指派', to='UserInfo', related_name='task', null=True, blank=True)
+
+    start_date = models.DateField(verbose_name='开始时间', null=True, blank=True)
+    end_date = models.DateField(verbose_name='结束时间', null=True, blank=True)
+
+    creator = models.ForeignKey(verbose_name='创建者', to='UserInfo', related_name='create_problems')
+
+    create_datetime = models.DateTimeField(verbose_name='创建时间', auto_now_add=True)
+    latest_update_datetime = models.DateTimeField(verbose_name='最后更新时间', auto_now=True)
+    parent = models.ForeignKey(verbose_name='父问题', to='self', related_name='child', null=True, blank=True,
+                               on_delete=models.SET_NULL)
+
+    def __str__(self):
+        return self.subject
+
+
+class Module(models.Model):
+    """ 模块（里程碑）,任务可以分不同的阶段"""
+    project = models.ForeignKey(verbose_name='项目', to='Project')
+    title = models.CharField(verbose_name='阶段名称', max_length=32)
+
+    def __str__(self):
+        return self.title
+
+class IssuesType(models.Model):
+    """ 问题类型 例如：任务、功能、Bug """
+
+    PROJECT_INIT_LIST = ["任务", '功能', 'Bug']
+
+    title = models.CharField(verbose_name='类型名称', max_length=32)
+    project = models.ForeignKey(verbose_name='项目', to='Project')
+
+    def __str__(self):
+        return self.title
+
+
+class IssuesReply(models.Model):
+    """ 问题回复"""
+
+    reply_type_choices = (
+        (1, '修改记录'),
+        (2, '回复')
+    )
+    reply_type = models.IntegerField(verbose_name='类型', choices=reply_type_choices)
+
+    issues = models.ForeignKey(verbose_name='问题', to='Issues')
+    content = models.TextField(verbose_name='描述')
+    creator = models.ForeignKey(verbose_name='创建者', to='UserInfo', related_name='create_reply')
+    create_datetime = models.DateTimeField(verbose_name='创建时间', auto_now_add=True)
+
+    reply = models.ForeignKey(verbose_name='回复', to='self', null=True, blank=True)

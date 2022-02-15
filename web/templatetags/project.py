@@ -22,7 +22,7 @@ def all_project_list(request):
 def manage_menu_list(request):
     data_list = [
         {'title': '概览', 'url': reverse("dashboard", kwargs={'project_id': request.tracer.project.id})},
-        {'title': '问题', 'url': reverse("issues", kwargs={'project_id': request.tracer.project.id})},
+        {'title': '交流', 'url': reverse("issues", kwargs={'project_id': request.tracer.project.id})},
         {'title': '统计', 'url': reverse("statistics", kwargs={'project_id': request.tracer.project.id})},
         {'title': '文件', 'url': reverse("file", kwargs={'project_id': request.tracer.project.id})},
         {'title': '配置', 'url': reverse("setting", kwargs={'project_id': request.tracer.project.id})},

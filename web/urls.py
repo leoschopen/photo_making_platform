@@ -2,7 +2,7 @@
 # -*- coding:utf-8 -*-
 
 from django.conf.urls import url, include
-from web.views import account, home, project, manage, file
+from web.views import account, home, project, manage, file, setting, issues
 
 urlpatterns = [
     url(r'^register/$', account.register, name='register'),  # register
@@ -22,7 +22,12 @@ urlpatterns = [
 
     url(r'^manage/(?P<project_id>\d+)/', include([
         url(r'^dashboard/$', manage.dashboard, name='dashboard'),
-        url(r'^issues/$', manage.issues, name='issues'),
+
+        url(r'^issues/$', issues.issues, name='issues'),
+        url(r'^issues/issues_upload$', issues.wiki_upload, name='wiki_upload'),
+        url(r'^issues/detail/(?P<issues_id>\d+)/$', issues.issues_detail, name='issues_detail'),
+        url(r'^issues/record/(?P<issues_id>\d+)/$', issues.issues_record, name='issues_record'),
+
         url(r'^statistics/$', manage.statistics, name='statistics'),
 
         url(r'^file/$', file.file, name='file'),
@@ -31,7 +36,8 @@ urlpatterns = [
         url(r'^file/post/$', file.file_post, name='file_post'),
         url(r'^file/download/(?P<file_id>\d+)/$', file.file_download, name='file_download'),
 
-        url(r'^setting/$', manage.setting, name='setting'),
+        url(r'^setting/$', setting.setting, name='setting'),
+        url(r'^setting/delete/$', setting.delete, name='setting_delete'),
     ], None, None)),
 ]
 
