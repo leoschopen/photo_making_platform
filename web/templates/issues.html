@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="{% static 'plugin/editor-md/css/editormd.min.css' %}">
     <link rel="stylesheet" href="{% static 'plugin/bootstrap-datepicker/css/bootstrap-datepicker.min.css' %}">
     <link rel="stylesheet" href="{% static 'plugin/bootstrap-select/css/bootstrap-select.min.css' %}">
+    <link rel="stylesheet" href="{% static 'plugin/select2/css/select2.min.css' %}">
     <style>
         .issues-list .number {
             width: 100px;
@@ -40,6 +41,35 @@
         .pd-0 {
             padding: 0 !important;
         }
+
+        /* 筛选 */
+        .filter-area .item {
+            margin-bottom: 15px;
+        }
+
+        .filter-area .item .title {
+            padding: 5px 0;
+        }
+
+        .filter-area .item .check-list a {
+            text-decoration: none;
+            display: inline-block;
+            min-width: 65px;
+        }
+
+        .filter-area .item .check-list label {
+            font-weight: 200;
+            font-size: 13px;
+            margin-left: 3px;
+        }
+
+        .filter-area .item .check-list a:hover {
+            font-weight: 300;
+        }
+
+        .filter-area .item .check-list .cell {
+            margin-right: 10px;
+        }
     </style>
 {% endblock %}
 
@@ -50,8 +80,18 @@
                 <div class="panel-heading">
                     <i class="fa fa-search" aria-hidden="true"></i> 筛选
                 </div>
-                <div class="panel-body">
-                    筛选选项
+                <div class="panel-body filter-area">
+                    {% for row in filter_list %}
+                        <div class="item">
+                            <div class="title">{{ row.title }}</div>
+                            <div class="check-list">
+                                {% for item in row.filter %}
+                                    {{ item }}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    {% endfor %}
+
                 </div>
             </div>
         </div>
@@ -62,7 +102,7 @@
                 </div>
                 <div class="panel-body">
                     <a class="btn btn-success btn-sm" data-toggle="modal" data-target="#addModal">新建问题</a>
-                    <a class="btn btn-primary btn-sm">邀请成员</a>
+                    <a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#inviteModal">邀请成员</a>
                 </div>
                 <table class="table">
 
@@ -76,7 +116,8 @@
                             </td>
                             <td class="issue">
                                 <div>
-                                    <a target="_blank" href="{% url 'issues_detail' project_id=request.tracer.project.id issues_id=item.id %}">{{ item.subject }}</a>
+                                    <a target="_blank"
+                                       href="{% url 'issues_detail' project_id=request.tracer.project.id issues_id=item.id %}">{{ item.subject }}</a>
                                 </div>
                                 <div class="tags">
                                     <span>
@@ -132,7 +173,6 @@
 
                     <form id="addForm" class="form-horizontal">
                         {% csrf_token %}
-{#主题#}
                         <div class="form-group">
                             <label for="{{ form.subject.id_for_label }}"
                                    class="col-md-2 control-label">{{ form.subject.label }}</label>
@@ -146,7 +186,6 @@
                                 <div class="error-msg"></div>
                             </div>
                         </div>
-{#阶段#}
                         <div class="form-group">
                             <label for="{{ form.module.id_for_label }}"
                                    class="col-md-2 control-label">{{ form.module.label }}</label>
@@ -160,7 +199,6 @@
                                 <div class="error-msg"></div>
                             </div>
                         </div>
-{#问题描述#}
                         <div class="form-group">
                             <label for="{{ form.desc.id_for_label }}"
                                    class="col-md-2 control-label">{{ form.desc.label }}</label>
@@ -177,7 +215,7 @@
                         </div>
 
                         <div class="form-group clearfix">
-{#状态#}
+
                             <div class="col-md-6 pd-0">
                                 <label for="{{ form.status.id_for_label }}"
                                        class="col-md-4 control-label">{{ form.status.label }}</label>
@@ -189,7 +227,6 @@
 
                                 </div>
                             </div>
-{#优先级#}
                             <div class="col-md-6 pd-0">
                                 <label for=" {{ form.priority.id_for_label }}"
                                        class="col-md-4 control-label">{{ form.priority.label }}</label>
@@ -204,7 +241,6 @@
                         </div>
 
                         <div class="form-group clearfix">
-{#指派#}
                             <div class="col-md-6 pd-0">
                                 <label for="inputPassword3" class="col-md-4 control-label">指派给</label>
                                 <div class="col-md-8">
@@ -244,6 +280,18 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="form-group clearfix">
+                            <div class="col-md-6 pd-0">
+                                <label for="inputPassword3" class="col-md-4 control-label"> 父问题</label>
+                                <div class="col-md-8">
+
+                                    {{ form.parent }}
+
+                                    <div class="error-msg"></div>
+                                </div>
+                            </div>
+                        </div>
+
                     </form>
                 </div>
                 <div class="modal-footer">
@@ -253,6 +301,50 @@
             </div>
         </div>
     </div>
+
+
+    <div class="modal fade in" id="inviteModal" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">邀请成员</h4>
+                </div>
+                <div class="modal-body" style="padding-right: 40px;">
+                    <form id="inviteForm">
+                        {% csrf_token %}
+                        {% for item in invite_form %}
+                            <div class="form-group">
+                                <label for="{{ item.id_for_label }}">{{ item.label }}</label>
+                                <span>{% if  item.help_text %}（{{ item.help_text }}）{% endif %}</span>
+                                {{ item }}
+                                <span class="error-msg"></span>
+                            </div>
+                        {% endfor %}
+                        <button type="button" class="btn btn-success" id="btnGenInviteCode">生成邀请码</button>
+                    </form>
+                    <div id="inviteArea" class="hide">
+                        <hr/>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-btn">
+                                    <input type="button" value="邀请链接" class="btn btn-default">
+                                </div>
+                                <input type="text" class="form-control" id="inviteUrl">
+                                <div class="input-group-btn">
+                                    <input type="button" value="复制链接" class="btn btn-primary" id="btnCopyUrl">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
 {% endblock %}
 
 {% block js %}
@@ -261,15 +353,81 @@
     <script src="{% static 'plugin/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js' %}"></script>
     <script src="{% static 'plugin/bootstrap-select/js/bootstrap-select.min.js' %}"></script>
     <script src="{% static 'plugin/bootstrap-select/js/i18n/defaults-zh_CN.min.js' %}"></script>
+    <script src="{% static 'plugin/select2/js/select2.min.js' %}"></script>
+    <script src="{% static 'plugin/select2/js/i18n/zh-CN.js' %}"></script>
+
     <script>
         var WIKI_UPLOAD_URL = "{% url 'wiki_upload' project_id=request.tracer.project.id %}";
         var POST_ISSUES = "{% url 'issues' project_id=request.tracer.project.id %}";
+        var INVITE_URL = "{% url 'invite_url' project_id=request.tracer.project.id %}";
 
         $(function () {
             bindBootStrapShownEvent();
             initDatePicker();
             bindAddSubmit();
+
+            bindClickCheckFilter();
+
+            initSelect2();
+
+            bindCreateInviteCode();
+            bindCopyUrl();
         });
+        /*
+        点击拷贝邀请码
+        */
+        function bindCopyUrl() {
+            $('#btnCopyUrl').click(function () {
+                var textInput = $('#inviteUrl')[0]; // document.getElementById('inviteUrl')
+                textInput.select();
+
+                document.execCommand("Copy");
+                alert('复制成功');
+            })
+        }
+
+        /*
+        点击生成要请链接
+         */
+        function bindCreateInviteCode() {
+            $('#btnGenInviteCode').click(function () {
+                $('.error-msg').empty();
+                $.ajax({
+                    url: INVITE_URL,
+                    type: "POST",
+                    data: $('#inviteForm').serialize(),
+                    dataType: "JSON",
+                    success: function (res) {
+                        if (res.status) {
+                            $('#inviteArea').removeClass('hide').find('#inviteUrl').val(res.data);
+                        } else {
+                            $.each(res.error, function (k, v) {
+                                $('#id_' + k).next('.error-msg').text(v[0]);
+                            })
+                        }
+                    }
+                })
+            })
+        }
+
+        function initSelect2() {
+            $('.select2').select2({}).on('select2:select', function (e) {
+                // 选中某一项触发
+                location.href = e.params.data.id;
+            }).on('select2:unselect', function (e) {
+                // 移除某一项触发
+                location.href = e.params.data.id;
+            });
+        }
+
+        /*
+        点击筛选的checkbox
+        */
+        function bindClickCheckFilter() {
+            $('.filter-area').find(':checkbox').click(function () {
+                location.href = $(this).parent().attr('href');
+            });
+        }
 
         /*
         添加对话框：初始化时间选择

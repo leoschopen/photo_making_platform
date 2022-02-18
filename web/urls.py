@@ -27,6 +27,8 @@ urlpatterns = [
         url(r'^issues/issues_upload$', issues.wiki_upload, name='wiki_upload'),
         url(r'^issues/detail/(?P<issues_id>\d+)/$', issues.issues_detail, name='issues_detail'),
         url(r'^issues/record/(?P<issues_id>\d+)/$', issues.issues_record, name='issues_record'),
+        url(r'^issues/change/(?P<issues_id>\d+)/$', issues.issues_change, name='issues_change'),
+        url(r'^issues/invite/url/$', issues.invite_url, name='invite_url'),
 
         url(r'^statistics/$', manage.statistics, name='statistics'),
 
@@ -39,5 +41,6 @@ urlpatterns = [
         url(r'^setting/$', setting.setting, name='setting'),
         url(r'^setting/delete/$', setting.delete, name='setting_delete'),
     ], None, None)),
+        url(r'^invite/join/(?P<code>\w+)/$', issues.invite_join, name='invite_join'),
 ]
 

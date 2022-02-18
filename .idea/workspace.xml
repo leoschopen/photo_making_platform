@@ -2,26 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="648211ec-7dce-4708-97ce-c6cc2ebb8b85" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/utils/pagination.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/forms/issues.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/migrations/0006_auto_20220215_1135.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/migrations/0007_auto_20220215_2021.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/issues_detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/setting_delete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templatetags/issues.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/views/issues.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/views/setting.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/migrations/0008_auto_20220217_1208.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/migrations/0009_projectinvite.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/templates/invite_join.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/encrypt.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/encrypt.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/tencent/cos.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/tencent/cos.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/forms/bootstrap.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/forms/bootstrap.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/forms/issues.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/forms/issues.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/templates/issues.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/issues.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/templates/setting.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/setting.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/templatetags/project.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/templatetags/project.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/issues_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/issues_detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/views/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/views/manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/views/issues.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/views/issues.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/项目记录.md" beforeDir="false" afterPath="$PROJECT_DIR$/项目记录.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,8 +73,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -325,7 +317,9 @@
       <workItem from="1644327793177" duration="2312000" />
       <workItem from="1644414392025" duration="3009000" />
       <workItem from="1644586085004" duration="11866000" />
-      <workItem from="1644890644156" duration="9349000" />
+      <workItem from="1644890644156" duration="10265000" />
+      <workItem from="1645066453162" duration="5763000" />
+      <workItem from="1645147208230" duration="5276000" />
     </task>
     <servers />
   </component>
@@ -364,42 +358,42 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="166" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1643257008901" />
-    <state width="1493" height="155" key="GridCell.Tab.0.bottom" timestamp="1644927720517">
+    <state width="1493" height="257" key="GridCell.Tab.0.bottom" timestamp="1645153724812">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="143" key="GridCell.Tab.0.bottom/0.0.1536.824/-1804.254.1443.968@0.0.1536.824" timestamp="1643259065691" />
-    <state width="1493" height="155" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1644927720517" />
-    <state width="1493" height="155" key="GridCell.Tab.0.center" timestamp="1644927720517">
+    <state width="1493" height="257" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1645153724812" />
+    <state width="1493" height="257" key="GridCell.Tab.0.center" timestamp="1645153724812">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="143" key="GridCell.Tab.0.center/0.0.1536.824/-1804.254.1443.968@0.0.1536.824" timestamp="1643259065691" />
-    <state width="1493" height="155" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1644927720517" />
-    <state width="1493" height="155" key="GridCell.Tab.0.left" timestamp="1644927720517">
+    <state width="1493" height="257" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1645153724812" />
+    <state width="1493" height="257" key="GridCell.Tab.0.left" timestamp="1645153724812">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="143" key="GridCell.Tab.0.left/0.0.1536.824/-1804.254.1443.968@0.0.1536.824" timestamp="1643259065691" />
-    <state width="1493" height="155" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1644927720517" />
-    <state width="1493" height="155" key="GridCell.Tab.0.right" timestamp="1644927720517">
+    <state width="1493" height="257" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1645153724812" />
+    <state width="1493" height="257" key="GridCell.Tab.0.right" timestamp="1645153724812">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="143" key="GridCell.Tab.0.right/0.0.1536.824/-1804.254.1443.968@0.0.1536.824" timestamp="1643259065691" />
-    <state width="1493" height="155" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1644927720517" />
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1644892102307">
+    <state width="1493" height="257" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1645153724812" />
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1644998907153">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1644892102307" />
-    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1644892102306">
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1644998907153" />
+    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1644998907153">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1644892102306" />
-    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1644892102306">
+    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1644998907153" />
+    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1644998907153">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1644892102306" />
-    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1644892102306">
+    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1644998907153" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1644998907153">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1644892102306" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1644998907153" />
     <state width="221" height="477" key="HiddenNamespacesPopup" timestamp="1643166248497">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -424,11 +418,11 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="562" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1644594219513" />
-    <state x="447" y="145" width="642" height="534" key="find.popup" timestamp="1644927676150">
+    <state x="447" y="145" width="642" height="534" key="find.popup" timestamp="1645153315747">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="447" y="145" width="642" height="534" key="find.popup/0.0.1536.824/-1804.254.1443.968@0.0.1536.824" timestamp="1643258965855" />
-    <state x="447" y="145" width="642" height="534" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1644927676150" />
+    <state x="447" y="145" width="642" height="534" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1645153315747" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1644329614663">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

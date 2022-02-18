@@ -49,3 +49,9 @@ class IssuesReplyModelForm(forms.ModelForm):
     class Meta:
         model = models.IssuesReply
         fields = ['content', 'reply']
+
+
+class InviteModelForm(BootStrapForm, forms.ModelForm):
+    class Meta:
+        model = models.ProjectInvite
+        fields = ['period', 'count']
