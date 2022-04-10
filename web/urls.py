@@ -2,7 +2,7 @@
 # -*- coding:utf-8 -*-
 
 from django.conf.urls import url, include
-from web.views import account, home, project, manage, file, setting, issues
+from web.views import account, home, project, manage, file, setting, issues, dashboard, statistics
 
 urlpatterns = [
     url(r'^register/$', account.register, name='register'),  # register
@@ -13,6 +13,7 @@ urlpatterns = [
     url(r'^send/sms/$',account.send_sms,name='send_sms'),
     url(r'^index/$',home.index,name='index'),
 
+
     #项目管理
     url(r'^project/list/$', project.project_list, name='project_list'),
     # /project/star/my/1
@@ -21,7 +22,9 @@ urlpatterns = [
     url(r'^project/unstar/(?P<project_type>\w+)/(?P<project_id>\d+)/$', project.project_unstar, name='project_unstar'),
 
     url(r'^manage/(?P<project_id>\d+)/', include([
-        url(r'^dashboard/$', manage.dashboard, name='dashboard'),
+        url(r'^dashboard/$', dashboard.dashboard, name='dashboard'),
+        url(r'^project_info/$', dashboard.project_info, name='project_info'),
+        url(r'^dashboard/issues/chart/$', dashboard.issues_chart, name='issues_chart'),
 
         url(r'^issues/$', issues.issues, name='issues'),
         url(r'^issues/issues_upload$', issues.wiki_upload, name='wiki_upload'),
@@ -30,7 +33,9 @@ urlpatterns = [
         url(r'^issues/change/(?P<issues_id>\d+)/$', issues.issues_change, name='issues_change'),
         url(r'^issues/invite/url/$', issues.invite_url, name='invite_url'),
 
-        url(r'^statistics/$', manage.statistics, name='statistics'),
+        url(r'^statistics/$', statistics.statistics, name='statistics'),
+        url(r'^statistics/priority/$', statistics.statistics_priority, name='statistics_priority'),
+        url(r'^statistics/project/user/$', statistics.statistics_project_user, name='statistics_project_user'),
 
         url(r'^file/$', file.file, name='file'),
         url(r'^file/delete/$', file.file_delete, name='file_delete'),

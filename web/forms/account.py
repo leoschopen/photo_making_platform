@@ -45,13 +45,15 @@ class RegisterModelForm(BootStrapForm,forms.ModelForm):
 
     mobile_phone = forms.CharField(label='手机号', validators=[RegexValidator(r'^(1[3|4|5|6|7|8|9])\d{9}$', '手机号格式错误'), ])
 
+    user_type_choices = [('1', '任务发放者'), ('2', '任务领取者')]
+    user_type = forms.ChoiceField(label='用户类型',choices=user_type_choices)
     code = forms.CharField(
         label='验证码',
         widget=forms.TextInput())
 
     class Meta:
         model = models.UserInfo
-        fields = ['username', 'email', 'password', 'confirm_password', 'mobile_phone', 'code']
+        fields = ['username', 'email', 'password', 'confirm_password', 'mobile_phone', 'user_type','code']
 
 
     def clean_username(self):
@@ -90,6 +92,10 @@ class RegisterModelForm(BootStrapForm,forms.ModelForm):
         if exists:
             raise ValidationError('手机号已注册')
         return mobile_phone
+
+    def clean_usertype(self):
+        user_type = self.cleaned_data['user_type']
+        return user_type
 
     def clean_code(self):
         code = self.cleaned_data['code']

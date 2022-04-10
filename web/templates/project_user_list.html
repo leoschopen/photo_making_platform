@@ -1,0 +1,196 @@
+{% extends 'layout/manage.html' %}
+{% block css %}
+    <style>
+        .project {
+            margin-top: 10px;
+        }
+
+        .panel-body {
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .panel-body > .item {
+            border-radius: 6px;
+            width: 100%;
+            border: 1px solid #dddddd;
+            margin: 20px 10px;
+
+        }
+
+        .panel-body > .item:hover {
+            border: 1px solid #f0ad4e;
+        }
+
+        .panel-body > .item > .title {
+            height: 104px;
+            color: white;
+            display: flex;
+            padding: 20px;
+        {#左右居中#} justify-content: left;
+        {#上下居中#} align-items: center;
+            border-top-left-radius: 6px;
+            border-top-right-radius: 6px;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .panel-body > .item > .info {
+            padding: 10px 10px;
+
+            display: flex;
+            justify-content: space-between;
+
+            border-bottom-left-radius: 6px;
+            border-bottom-right-radius: 6px;
+            color: #8c8c8c;
+
+        }
+
+        .panel-body > .item > .info a {
+            text-decoration: none;
+        }
+
+        .panel-body > .item > .info .fa-star {
+            font-size: 18px;
+        }
+
+        .color-radio label {
+            margin-left: 0;
+            padding-left: 0;
+        }
+
+        .color-radio input[type="radio"] {
+            display: none;
+        }
+
+        .color-radio input[type="radio"] + .cycle {
+            display: inline-block;
+            height: 25px;
+            width: 25px;
+            border-radius: 50%;
+            border: 2px solid #dddddd;
+        }
+
+        .color-radio input[type="radio"]:checked + .cycle {
+            border: 2px solid black;
+        }
+    </style>
+{% endblock %}
+{% block content %}
+    <div class="container-fluid project">
+        <div class="panel panel-default">
+            <div class="panel-heading"><i class="fa fa-handshake-o" aria-hidden="true"></i> 可选任务</div>
+            <div class="panel-body">
+                {% for item in all_project_dict.project %}
+                    <div class="item">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-12">
+                                <div class="thumbnail">
+                                    <div class="caption">
+                                        <h3>{{ item.name }}</h3>
+                                        <p>价格：{{ item.task_price }}</p>
+                                        <p>距离：{{ item.distance }}公里</p>
+                                        <p>
+                                            <a href="" class="btn btn-primary" role="button">抢单</a>
+                                            <a href="{% url 'file' project_id=item.id %}" class="btn btn-default"
+                                               role="button">详情</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <div>
+                                <span>创建者：{{ item.creator.username }}</span>
+                            </div>
+                            <div>
+                                <i class="fa fa-user-o" aria-hidden="true"></i>
+                                <span>{{ item.join_count }}/</span>
+                                <i class="fa fa-user-o" aria-hidden="true"></i>
+                                <span>{{ item.user_count }}</span>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading"><i class="fa fa-handshake-o" aria-hidden="true"></i> 我参与的</div>
+            <div class="panel-body">
+                {% for item in project_dict.join %}
+                    <div class="item">
+                        <a href="{% url 'dashboard' project_id=item.id %}" class="title"
+                           style="background-color: {{ item.get_color_display }};">{{ item.name }}</a>
+                        <div class="info">
+                            <div>
+                                <span>创建者：{{ item.creator.username }}</span>
+                            </div>
+                            <div>
+                                <i class="fa fa-user-o" aria-hidden="true"></i>
+                                <span>{{ item.join_count }}</span>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+                {% for item in project_dict.my %}
+                    <div class="item">
+                        <a href="{% url 'dashboard' project_id=item.id %}" class="title"
+                           style="background-color: {{ item.get_color_display }};">{{ item.name }}</a>
+                        <div class="info">
+                            <div>
+                                <span>创建者：{{ item.creator.username }}</span>
+                            </div>
+                            <div>
+                                <i class="fa fa-user-o" aria-hidden="true"></i>
+                                <span>{{ item.join_count }}/</span>
+                                <i class="fa fa-user-o" aria-hidden="true"></i>
+                                <span>{{ item.user_count }}</span>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    </div>
+
+{% endblock %}
+
+{#{% block js %}#}
+{#    <script>#}
+{#        $(function () {#}
+{#            bindSubmit();#}
+{#        });#}
+{##}
+{##}
+{#        function bindSubmit() {#}
+{#            $('#btnSubmit').click(function () {#}
+{##}
+{#                $.ajax({#}
+{#                    url: "{% url 'project_list' %}",#}
+{#                    type: "POST",#}
+{#                    data: $('#addForm').serialize(),#}
+{#                    dataType: "JSON",#}
+{#                    success: function (res) {#}
+{#                        console.log(res);#}
+{#                        if (res.status) {#}
+{#                            location.href = location.href;#}
+{#                            // location.reload()#}
+{#                        } else {#}
+{#                            $.each(res.error, function (key, value) {#}
+{#                                $("#id_" + key).next().text(value[0]);#}
+{#                            })#}
+{#                        }#}
+{#                    }#}
+{#                })#}
+{##}
+{#            })#}
+{#        }#}
+{#    </script>#}
+{#{% endblock %}#}

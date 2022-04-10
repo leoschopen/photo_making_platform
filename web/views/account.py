@@ -32,12 +32,11 @@ def register(request):
 
         # 创建交易记录
         # 方式一
-        policy_object = models.PricePolicy.objects.filter(category=1, title="个人免费版").first()
+        # policy_object = models.PricePolicy.objects.filter(category=1, title="个人免费版").first()
         models.Transaction.objects.create(
             status=2,
             order=str(uuid.uuid4()),
             user=instance,
-            price_policy=policy_object,
             count=0,
             price=0,
             start_datetime=datetime.datetime.now()
@@ -75,6 +74,7 @@ def login_sms(request):
 
         request.session['user_id'] = user_object.id
         request.session['user_name'] = user_object.username
+        request.session['user_category'] = user_object.category
 
         return JsonResponse({"status": True, 'data': "/index/"})
 
@@ -98,6 +98,11 @@ def login(request):
         if user_object:
             # 登录成功为止1
             request.session['user_id'] = user_object.id
+
+            #2022.4.6加入
+            request.session['user_name'] = user_object.username
+            request.session['user_category'] = user_object.category
+
             request.session.set_expiry(60 * 60 * 24 * 14)
             return redirect('index')
 

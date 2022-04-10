@@ -16,6 +16,11 @@
             {% endfor %}
             <li role="separator" class="divider"></li>
         {% endif %}
-        <li><a href="{% url 'project_list' %}">所有项目</a></li>
+        {% if project %}
+            <li><i class="fa fa-handshake-o" aria-hidden="true"></i> 所有项目</li>
+            {% for item in project %}
+                <li><a href="{% url 'dashboard' project_id=item.id %}">{{ item.name }}</a></li>
+            {% endfor %}
+        {% endif %}
     </ul>
 </li>

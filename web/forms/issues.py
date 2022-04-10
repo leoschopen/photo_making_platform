@@ -31,7 +31,12 @@ class IssuesModelForm(BootStrapForm, forms.ModelForm):
 
         # 3.指派和关注者
         # 数据库找到当前项目的参与者 和 创建者
+        print('hewiufwiegf',request.tracer.project.creator_id)
+
+
+
         total_user_list = [(request.tracer.project.creator_id, request.tracer.project.creator.username), ]
+
         project_user_list = models.ProjectUser.objects.filter(project=request.tracer.project).values_list('user_id',
                                                                                                           'user__username')
         total_user_list.extend(project_user_list)

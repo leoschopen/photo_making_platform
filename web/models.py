@@ -3,46 +3,52 @@ from django.db import models
 
 class UserInfo(models.Model):
     username = models.CharField(verbose_name='用户名', max_length=32, db_index=True)  # db_index=True 索引
+    user_type = (
+        (1, '任务发放者'),
+        (2, '任务领取者'),
+    )
+    category = models.SmallIntegerField(verbose_name='用户类型', default=2, choices=user_type)
     email = models.EmailField(verbose_name='邮箱', max_length=32)
     mobile_phone = models.CharField(verbose_name='手机号', max_length=32)
     password = models.CharField(verbose_name='密码', max_length=32)
+    asset = models.IntegerField(verbose_name='余额',default=1000)
+    reputation = models.FloatField(verbose_name='信誉值',default=1000)
+    latitude = models.FloatField(verbose_name='经度', default=22.000000)
+    longitude = models.FloatField(verbose_name='纬度', default=22.000000)
+
+    # price_policy = models.ForeignKey(verbose_name='价格策略', to='PricePolicy')
     # 注册成功默认为空，如果购买套餐后将policy放在这里，以免后面进行对支付记录进行排序
     # price_policy = models.ForeignKey(verbose_name='价格策略', to='PricePolicy', null=True, blank=True)
 
 
-class PricePolicy(models.Model):
-    """ 价格策略 """
-    category_choices = (
-        (1, '免费版'),
-        (2, '收费版'),
-        (3, '其他'),
-    )
-    category = models.SmallIntegerField(verbose_name='收费类型', default=2, choices=category_choices)
-    title = models.CharField(verbose_name='标题', max_length=32)
-    price = models.PositiveIntegerField(verbose_name='价格')  # 正整数
-
-    project_num = models.PositiveIntegerField(verbose_name='创建任务数')
-    project_member = models.PositiveIntegerField(verbose_name='任务参与人数')
-    project_space = models.PositiveIntegerField(verbose_name='单任务空间')
-    per_file_size = models.PositiveIntegerField(verbose_name='单文件上传大小')
-
-    create_datetime = models.DateTimeField(verbose_name='创建时间', auto_now_add=True)
+# class PricePolicy(models.Model):
+#     """ 不同星级的价格策略 """
+#     category_choices = (
+#         (1, '一星级'),
+#         (2, '二星级'),
+#         (3, '三星级'),
+#     )
+#     category = models.SmallIntegerField(verbose_name='收费类型', default=1, choices=category_choices)
+#     title = models.CharField(verbose_name='标题', max_length=32)
+#
+#     project_num = models.PositiveIntegerField(verbose_name='创建任务数')
+#     project_member = models.PositiveIntegerField(verbose_name='任务参与人数')
+#     project_space = models.PositiveIntegerField(verbose_name='单任务空间')
+#     per_file_size = models.PositiveIntegerField(verbose_name='单文件上传大小')
 
 
 class Transaction(models.Model):
-    """ 交易记录 """
+    """ 交易记录
+    主要是领取任务者在审核通过后获得相应的报酬"""
     status_choice = (
-        (1, '未支付'),
-        (2, '已支付')
+        (1, '未领取'),
+        (2, '已领取')
     )
     status = models.SmallIntegerField(verbose_name='状态', choices=status_choice)
 
     order = models.CharField(verbose_name='订单号', max_length=64, unique=True)  # 唯一索引
 
     user = models.ForeignKey(verbose_name='用户', to='UserInfo', on_delete=models.CASCADE)
-    price_policy = models.ForeignKey(verbose_name='价格策略', to='PricePolicy', on_delete=models.CASCADE)
-
-    count = models.IntegerField(verbose_name='数量（年）', help_text='0表示无限期')
 
     price = models.IntegerField(verbose_name='实际支付价格')
 
@@ -71,7 +77,11 @@ class Project(models.Model):
     use_space = models.IntegerField(verbose_name='任务相关文件已使用空间', default=0)
     star = models.BooleanField(verbose_name='星标', default=False)
 
+    latitude = models.FloatField(verbose_name='经度', default=22.000000)
+    longitude = models.FloatField(verbose_name='纬度', default=22.000000)
+
     join_count = models.SmallIntegerField(verbose_name='参与人数', default=1)
+    user_count = models.SmallIntegerField(verbose_name='总人数', default=100)
     creator = models.ForeignKey(verbose_name='创建者', to='UserInfo', on_delete=models.CASCADE)
     create_datetime = models.DateTimeField(verbose_name='创建时间', auto_now_add=True)
 
@@ -84,7 +94,6 @@ class ProjectUser(models.Model):
     user = models.ForeignKey(verbose_name='领取任务者', to='UserInfo', on_delete=models.CASCADE)
     project = models.ForeignKey(verbose_name='任务', to='Project', on_delete=models.CASCADE)
     star = models.BooleanField(verbose_name='星标', default=False)
-
     create_datetime = models.DateTimeField(verbose_name='加入时间', auto_now_add=True)
 
 

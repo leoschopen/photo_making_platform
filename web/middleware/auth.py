@@ -26,7 +26,6 @@ class AuthMiddleware(MiddlewareMixin):
         user_id = request.session.get('user_id', 0)
         user_object = models.UserInfo.objects.filter(id=user_id).first()
         request.tracer.user = user_object
-
         # 白名单：没有登录都可以访问的URL
         """
         1. 获取当用户访问的URL
@@ -44,30 +43,7 @@ class AuthMiddleware(MiddlewareMixin):
         # 方式一：免费额度在交易记录中存储
 
         # 获取当前用户ID值最大（最近交易记录）
-        _object = models.Transaction.objects.filter(user=user_object, status=2).order_by('-id').first()
-        # 判断是否已过期
-        current_datetime = datetime.datetime.now()
-        if _object.end_datetime and _object.end_datetime < current_datetime:
-            _object = models.Transaction.objects.filter(user=user_object, status=2, price_policy__category=1).first()
-
-        request.tracer.price_policy = _object.price_policy
-
-        # 方式二：免费的额度存储配置文件
-        """
-        # 获取当前用户ID值最大（最近交易记录）
-        _object = models.Transaction.objects.filter(user=user_object, status=2).order_by('-id').first()
-
-        if not _object:
-            # 没有购买
-            request.price_policy = models.PricePolicy.objects.filter(category=1, title="个人免费版").first()
-        else:
-            # 付费版
-            current_datetime = datetime.datetime.now()
-            if _object.end_datetime and _object.end_datetime < current_datetime:
-                request.price_policy = models.PricePolicy.objects.filter(category=1, title="个人免费版").first()
-            else:
-                request.price_policy = _object.price_policy
-        """
+        # request.tracer.price_policy = request.tracer.user.price_policy
 
     def process_view(self, request, view, args, kwargs):
 
@@ -88,6 +64,12 @@ class AuthMiddleware(MiddlewareMixin):
         if project_user_object:
             # 是我参与的项目
             request.tracer.project = project_user_object.project
+            return
+
+        all_project_list = models.Project.objects.filter().exclude(creator=request.tracer.user).first()
+        if all_project_list:
+            # 是他人的项目
+            request.tracer.project = all_project_list
             return
 
         return redirect('project_list')

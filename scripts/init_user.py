@@ -14,4 +14,4 @@ django.setup()
 from web import models
 # 往数据库添加数据：链接数据库、操作、关闭链接
 password =encrypt.md5('123456789')
-models.UserInfo.objects.create(username='admin', email='admin@qq.com', mobile_phone='13838383838', password=password)
+models.UserInfo.objects.create(username='leo', email='leo@qq.com', mobile_phone='13838383839', password=password)

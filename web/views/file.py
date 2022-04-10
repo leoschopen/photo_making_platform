@@ -136,8 +136,8 @@ def file_delete(request, project_id):
 @csrf_exempt
 def cos_credential(request, project_id):
     """ 获取cos上传临时凭证 """
-    per_file_limit = request.tracer.price_policy.per_file_size * 1024 * 1024
-    total_file_limit = request.tracer.price_policy.project_space * 1024 * 1024 * 1024
+    per_file_limit = 10 * 1024 * 1024
+    total_file_limit = 1024 * 1024 * 1024 * 1024
 
     total_size = 0
     file_list = json.loads(request.body.decode('utf-8'))
@@ -146,7 +146,7 @@ def cos_credential(request, project_id):
         # 单文件限制的大小 M
         # 超出限制
         if item['size'] > per_file_limit:
-            msg = "单文件超出限制（最大{}M），文件：{}，请升级套餐。".format(request.tracer.price_policy.per_file_size, item['name'])
+            msg = "单文件超出限制（最大{}M），文件：{}".format(10, item['name'])
             return JsonResponse({'status': False, 'error': msg})
         total_size += item['size']
 
@@ -156,7 +156,7 @@ def cos_credential(request, project_id):
     # request.tracer.price_policy.project_space  # 项目的允许的空间
     # request.tracer.project.use_space # 项目已使用的空间
     if request.tracer.project.use_space + total_size > total_file_limit:
-        return JsonResponse({'status': False, 'error': "容量超过限制，请升级套餐。"})
+        return JsonResponse({'status': False, 'error': "容量超过限制"})
 
     data_dict = credential(request.tracer.project.bucket, request.tracer.project.region)
     return JsonResponse({'status': True, 'data': data_dict})
@@ -202,7 +202,8 @@ def file_post(request, project_id):
             'name': instance.name,
             'file_size': instance.file_size,
             'username': instance.update_user.username,
-            'datetime': instance.update_datetime.strftime("%Y年%m月%d日 %H:%M"),
+            'datetime': instance.update_datetime.strftime('%Y{y}%m{m}%d{d}  %H:%M').format(y='年', m='月', d='日'),
+            # 'datetime': instance.update_datetime.strftime("%Y年%m月%d日 %H:%M"),
             'download_url': reverse('file_download', kwargs={"project_id": project_id, 'file_id': instance.id}),
             # 'file_type': instance.get_file_type_display()
         }

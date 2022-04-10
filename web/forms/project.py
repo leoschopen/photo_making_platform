@@ -40,7 +40,7 @@ class ProjectModelForm(BootStrapForm, forms.ModelForm):
         # 现在已创建多少项目？
         count = models.Project.objects.filter(creator=self.request.tracer.user).count()
 
-        if count >= self.request.tracer.price_policy.project_num:
-            raise ValidationError('任务个数超限，请购买套餐')
+#        if count >= self.request.tracer.price_policy.project_num:
+ #           raise ValidationError('任务个数超限，星级等级不够')
 
         return name
