@@ -2,44 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="648211ec-7dce-4708-97ce-c6cc2ebb8b85" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/utils/kmeans.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/location.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/migrations/0010_auto_20220220_2042.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/migrations/0011_projectuser_star.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/migrations/0012_userinfo_category.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/migrations/0013_auto_20220220_2126.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/migrations/0014_auto_20220220_2127.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/migrations/0015_auto_20220220_2136.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/migrations/0016_userinfo_price_policy.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/migrations/0017_auto_20220227_1739.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/migrations/0018_project_user_count.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/layout/user_manage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/payment.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/price.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/project_info.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/project_user_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templatetags/dashboard.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/views/dashboard.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/views/statistics.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/init_project.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/input_django.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/my_model.h5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/task_pricing.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/migrations/0019_auto_20220426_1725.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bug_manage/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/bug_manage/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/init_user.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/init_user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/forms/account.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/forms/account.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/forms/issues.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/forms/issues.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/forms/project.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/forms/project.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/location.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/location.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/middleware/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/middleware/auth.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/templates/inclusion/all_project_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/inclusion/all_project_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/img/index/index-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/img/index/index-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/img/index/index-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/file.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/file.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/invite_join.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/invite_join.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/templates/layout/basic.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/layout/basic.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/templates/layout/manage.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/layout/manage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/templates/project_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/project_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/templates/statistics.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/statistics.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/templatetags/project.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/templatetags/project.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/project_user_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/project_user_list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/views/account.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/views/account.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/views/file.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/views/file.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/views/home.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/views/home.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/views/issues.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/views/issues.py" afterDir="false" />
@@ -104,8 +85,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -135,11 +116,11 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/scripts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/utils" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -150,36 +131,14 @@
       <recent name="D:\PyProject\bug_manage\app01\templates" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\PyProject\bug_manage\utils" />
       <recent name="D:\PyProject\bug_manage\scripts" />
       <recent name="D:\PyProject\bug_manage\web" />
       <recent name="D:\PyProject\bug_manage\web\templates\web\static\plugin\bootstrap\css" />
       <recent name="D:\PyProject\bug_manage\web\templates\web\static\js" />
-      <recent name="D:\PyProject\bug_manage\web\templates\web\static\plugin" />
     </key>
   </component>
-  <component name="RunManager" selected="Django server.bug_manage">
-    <configuration name="cos_upload_demo" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="bug_manage" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/cos_upload_demo.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.init_project">
     <configuration name="home" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="bug_manage" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -202,7 +161,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="init_price_policy" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="init_project" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="bug_manage" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -215,7 +174,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/init_price_policy.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/init_project.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -268,6 +227,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="task_pricing" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="bug_manage" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/utils" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utils/task_pricing.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="bug_manage" type="Python.DjangoServer" factoryName="Django server">
       <module name="bug_manage" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -294,19 +275,19 @@
     </configuration>
     <list>
       <item itemvalue="Django server.bug_manage" />
-      <item itemvalue="Python.cos_upload_demo" />
       <item itemvalue="Python.home" />
-      <item itemvalue="Python.init_price_policy" />
       <item itemvalue="Python.init_user" />
       <item itemvalue="Python.location" />
+      <item itemvalue="Python.init_project" />
+      <item itemvalue="Python.task_pricing" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.init_user" />
+        <item itemvalue="Python.init_project" />
         <item itemvalue="Python.location" />
+        <item itemvalue="Python.task_pricing" />
+        <item itemvalue="Python.init_user" />
         <item itemvalue="Python.home" />
-        <item itemvalue="Python.cos_upload_demo" />
-        <item itemvalue="Python.init_price_policy" />
       </list>
     </recent_temporary>
   </component>
@@ -364,7 +345,23 @@
       <workItem from="1649249157434" duration="5145000" />
       <workItem from="1649328372213" duration="6842000" />
       <workItem from="1649418231507" duration="6678000" />
-      <workItem from="1649552346840" duration="11014000" />
+      <workItem from="1649552346840" duration="16987000" />
+      <workItem from="1649902665485" duration="15000" />
+      <workItem from="1649902855228" duration="1395000" />
+      <workItem from="1649946805950" duration="308000" />
+      <workItem from="1649983016692" duration="216000" />
+      <workItem from="1649984390564" duration="608000" />
+      <workItem from="1649988024778" duration="471000" />
+      <workItem from="1650077931572" duration="6983000" />
+      <workItem from="1650114899883" duration="29000" />
+      <workItem from="1650115340105" duration="701000" />
+      <workItem from="1650159925030" duration="8000" />
+      <workItem from="1650598569352" duration="1031000" />
+      <workItem from="1650627909049" duration="512000" />
+      <workItem from="1650629549521" duration="4945000" />
+      <workItem from="1650679255046" duration="602000" />
+      <workItem from="1650853224313" duration="106000" />
+      <workItem from="1650958583195" duration="6211000" />
     </task>
     <servers />
   </component>
@@ -383,6 +380,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1643250933276" />
+    <state x="500" y="221" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1650114916877">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="500" y="221" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1650114916877" />
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1645362452169">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -399,58 +400,58 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="254" height="195" key="DatabaseViewActions_Filter/0.0.1536.824@0.0.1536.824" timestamp="1643165997188" />
-    <state x="549" y="166" key="FileChooserDialogImpl" timestamp="1643257008901">
+    <state x="522" y="136" width="438" height="463" key="FileChooserDialogImpl" timestamp="1650115399220">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="166" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1643257008901" />
-    <state width="1493" height="233" key="GridCell.Tab.0.bottom" timestamp="1649574250578">
+    <state x="522" y="136" width="438" height="463" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1650115399220" />
+    <state width="1493" height="151" key="GridCell.Tab.0.bottom" timestamp="1650964932682">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="234" key="GridCell.Tab.0.bottom/0.0.1536.824/-1804.254.1443.968@0.0.1536.824" timestamp="1649557193175" />
-    <state width="1493" height="233" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1649574250578" />
-    <state width="1493" height="233" key="GridCell.Tab.0.center" timestamp="1649574250578">
+    <state width="1493" height="151" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1650964932682" />
+    <state width="1493" height="151" key="GridCell.Tab.0.center" timestamp="1650964932681">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="234" key="GridCell.Tab.0.center/0.0.1536.824/-1804.254.1443.968@0.0.1536.824" timestamp="1649557193174" />
-    <state width="1493" height="233" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1649574250578" />
-    <state width="1493" height="233" key="GridCell.Tab.0.left" timestamp="1649574250578">
+    <state width="1493" height="151" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1650964932681" />
+    <state width="1493" height="151" key="GridCell.Tab.0.left" timestamp="1650964932681">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="234" key="GridCell.Tab.0.left/0.0.1536.824/-1804.254.1443.968@0.0.1536.824" timestamp="1649557193174" />
-    <state width="1493" height="233" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1649574250578" />
-    <state width="1493" height="233" key="GridCell.Tab.0.right" timestamp="1649574250578">
+    <state width="1493" height="151" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1650964932681" />
+    <state width="1493" height="151" key="GridCell.Tab.0.right" timestamp="1650964932681">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="234" key="GridCell.Tab.0.right/0.0.1536.824/-1804.254.1443.968@0.0.1536.824" timestamp="1649557193174" />
-    <state width="1493" height="233" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1649574250578" />
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1649567803621">
+    <state width="1493" height="151" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1650964932681" />
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1649643642724">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1649567803621" />
-    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1649567803621">
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1649643642724" />
+    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1649643642723">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1649567803621" />
-    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1649567803621">
+    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1649643642723" />
+    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1649643642723">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1649567803621" />
-    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1649567803621">
+    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1649643642723" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1649643642724">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1649567803621" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1649643642724" />
     <state width="221" height="477" key="HiddenNamespacesPopup" timestamp="1643166248497">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="221" height="477" key="HiddenNamespacesPopup/0.0.1536.824@0.0.1536.824" timestamp="1643166248497" />
-    <state x="586" y="134" key="RollbackChangesDialog" timestamp="1644594244369">
+    <state x="586" y="134" key="RollbackChangesDialog" timestamp="1650092511554">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="586" y="134" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1644594244369" />
-    <state x="3" y="109" key="SettingsEditor" timestamp="1646118655142">
+    <state x="586" y="134" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1650092511554" />
+    <state x="126" y="82" key="SettingsEditor" timestamp="1650628091750">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="3" y="109" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1646118655142" />
+    <state x="126" y="82" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1650628091750" />
     <state x="499" y="217" key="com.intellij.database.dbimport.ImportUtil.MyDialog" timestamp="1643619371947">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -463,15 +464,15 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="562" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1644594219513" />
-    <state x="447" y="145" width="642" height="534" key="find.popup" timestamp="1649574208992">
+    <state x="447" y="145" width="642" height="534" key="find.popup" timestamp="1650093407959">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="447" y="145" width="642" height="534" key="find.popup/0.0.1536.824/-1804.254.1443.968@0.0.1536.824" timestamp="1649553745958" />
-    <state x="447" y="145" width="642" height="534" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1649574208992" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1646207119278">
+    <state x="447" y="145" width="642" height="534" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1650093407959" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1649575035264">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1646207119278" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1649575035264" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -487,10 +488,12 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/bug_manage$init_user.coverage" NAME="init_user Coverage Results" MODIFIED="1649557193162" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
     <SUITE FILE_PATH="coverage/bug_manage$home.coverage" NAME="home Coverage Results" MODIFIED="1646120938417" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/web/views" />
-    <SUITE FILE_PATH="coverage/bug_manage$location.coverage" NAME="location Coverage Results" MODIFIED="1649419656830" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
+    <SUITE FILE_PATH="coverage/bug_manage$location.coverage" NAME="location Coverage Results" MODIFIED="1650958871282" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
     <SUITE FILE_PATH="coverage/bug_manage$redisConnect.coverage" NAME="redisConnect Coverage Results" MODIFIED="1641997602137" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app01/try" />
     <SUITE FILE_PATH="coverage/bug_manage$cos_upload_demo.coverage" NAME="cos_upload_demo Coverage Results" MODIFIED="1644593180282" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
     <SUITE FILE_PATH="coverage/bug_manage$image_code.coverage" NAME="image_code Coverage Results" MODIFIED="1643196672707" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
+    <SUITE FILE_PATH="coverage/bug_manage$init_project.coverage" NAME="init_project Coverage Results" MODIFIED="1650963751784" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
+    <SUITE FILE_PATH="coverage/bug_manage$task_pricing.coverage" NAME="task_pricing Coverage Results" MODIFIED="1650628058681" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
     <SUITE FILE_PATH="coverage/bug_manage$.coverage" NAME="画图 Coverage Results" MODIFIED="1643191911083" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
     <SUITE FILE_PATH="coverage/bug_manage$init_price_policy.coverage" NAME="init_price_policy Coverage Results" MODIFIED="1643462046278" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
   </component>

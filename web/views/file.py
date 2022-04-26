@@ -3,6 +3,7 @@
 import json
 
 import requests
+from django.db.models import Q
 from django.shortcuts import render
 from django.http import JsonResponse, HttpResponse
 from django.forms import model_to_dict
@@ -37,7 +38,9 @@ def file(request, project_id):
             parent = parent.parent
 
         # 当前目录下所有的文件 & 文件夹获取到即可
-        queryset = models.FileRepository.objects.filter(project=request.tracer.project)
+        queryset = models.FileRepository.objects.filter(
+            Q(project=request.tracer.project) & Q(update_user_id=request.tracer.user.id))
+        # queryset = models.FileRepository.objects.filter(update_user_id=request.tracer.user.id)
         if parent_object:
             # 进入了某目录
             file_object_list = queryset.filter(parent=parent_object).order_by('-file_type')
@@ -164,52 +167,56 @@ def cos_credential(request, project_id):
 
 @csrf_exempt
 def file_post(request, project_id):
-    """ 已上传成功的文件写入到数据 """
-    """
-    name: fileName,
-    key: key,
-    file_size: fileSize,
-    parent: CURRENT_FOLDER_ID,
-    # etag: data.ETag,
-    file_path: data.Location
-    """
+    # 首先要判断用户是否已经加入了此项目
+    project_user_object = models.ProjectUser.objects.filter(project_id=project_id).first()
+    if not project_user_object:
+        return JsonResponse({'status': False, 'data': "您还未加入该项目！"})
 
-    # 根据key再去cos获取文件Etag和"db7c0d83e50474f934fd4ddf059406e5"
+    elif project_user_object.user_id == request.tracer.user.id:
+        """ 已上传成功的文件写入到数据 """
+        """
+        name: fileName,
+        key: key,
+        file_size: fileSize,
+        parent: CURRENT_FOLDER_ID,
+        # etag: data.ETag,
+        file_path: data.Location
+        """
 
-    print(request.POST)
-    # 把获取到的数据写入数据库即可
-    form = FileModelForm(request, data=request.POST)
-    if form.is_valid():
+        # 根据key再去cos获取文件Etag和"db7c0d83e50474f934fd4ddf059406e5"
 
+        # 把获取到的数据写入数据库即可
+        form = FileModelForm(request, data=request.POST)
+        if form.is_valid():
+            # 通过ModelForm.save存储到数据库中的数据返回的isntance对象，无法通过get_xx_display获取choice的中文
+            # form.instance.file_type = 1
+            # form.update_user = request.tracer.user
+            # instance = form.save() # 添加成功之后，获取到新添加的那个对象（instance.id,instance.name,instance.file_type,instace.get_file_type_display()
 
-        # 通过ModelForm.save存储到数据库中的数据返回的isntance对象，无法通过get_xx_display获取choice的中文
-        # form.instance.file_type = 1
-        # form.update_user = request.tracer.user
-        # instance = form.save() # 添加成功之后，获取到新添加的那个对象（instance.id,instance.name,instance.file_type,instace.get_file_type_display()
+            # 校验通过：数据写入到数据库
+            data_dict = form.cleaned_data
+            data_dict.pop('etag')
+            data_dict.update({'project': request.tracer.project, 'file_type': 1, 'update_user': request.tracer.user})
+            instance = models.FileRepository.objects.create(**data_dict)
 
-        # 校验通过：数据写入到数据库
-        data_dict = form.cleaned_data
-        data_dict.pop('etag')
-        data_dict.update({'project': request.tracer.project, 'file_type': 1, 'update_user': request.tracer.user})
-        instance = models.FileRepository.objects.create(**data_dict)
+            # 项目的已使用空间：更新 (data_dict['file_size'])
+            request.tracer.project.use_space += data_dict['file_size']
+            request.tracer.project.save()
 
-        # 项目的已使用空间：更新 (data_dict['file_size'])
-        request.tracer.project.use_space += data_dict['file_size']
-        request.tracer.project.save()
+            result = {
+                'id': instance.id,
+                'name': instance.name,
+                'file_size': instance.file_size,
+                'username': instance.update_user.username,
+                'datetime': instance.update_datetime.strftime('%Y{y}%m{m}%d{d}  %H:%M').format(y='年', m='月', d='日'),
+                # 'datetime': instance.update_datetime.strftime("%Y年%m月%d日 %H:%M"),
+                'download_url': reverse('file_download', kwargs={"project_id": project_id, 'file_id': instance.id}),
+                # 'file_type': instance.get_file_type_display()
+            }
+            return JsonResponse({'status': True, 'data': result})
+    else:
+        return JsonResponse({'status': False, 'data': "文件错误"})
 
-        result = {
-            'id': instance.id,
-            'name': instance.name,
-            'file_size': instance.file_size,
-            'username': instance.update_user.username,
-            'datetime': instance.update_datetime.strftime('%Y{y}%m{m}%d{d}  %H:%M').format(y='年', m='月', d='日'),
-            # 'datetime': instance.update_datetime.strftime("%Y年%m月%d日 %H:%M"),
-            'download_url': reverse('file_download', kwargs={"project_id": project_id, 'file_id': instance.id}),
-            # 'file_type': instance.get_file_type_display()
-        }
-        return JsonResponse({'status': True, 'data': result})
-
-    return JsonResponse({'status': False, 'data': "文件错误"})
 
 def file_download(request, project_id, file_id):
     """ 下载文件 """

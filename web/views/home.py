@@ -3,7 +3,6 @@
 import datetime
 from django.shortcuts import render, redirect
 
-from utils.location import gpstoWebMercator
 from web import models
 
 
@@ -58,14 +57,4 @@ def payment(request, policy_id):
 
     return render(request, 'payment.html', context)
 
-def price(request):
-    task_project = models.Project.objects.all();
-    for project in task_project:
-        core_lon,core_lat = gpstoWebMercator(19,19);
-        lat,lon = gpstoWebMercator(project.latitude, project.longitude)
-        import numpy as np
-        a = np.array((core_lon,core_lat))
-        b = np.array((lat,lon))
 
-        dist = np.linalg.norm(a - b)
-        print(dist)

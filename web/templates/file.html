@@ -123,13 +123,14 @@
                                 </a>
                             {% endif %}
 
-
-                            <a class="btn btn-danger btn-xs"
-                               data-toggle="modal"
-                               data-fid="{{ item.id }}"
-                               data-target="#alertModal">
-                                <i class="fa fa-trash" aria-hidden="true"></i>
-                            </a>
+                            {% if request.tracer.user.username == item.update_user.username %}
+                                <a class="btn btn-danger btn-xs"
+                                   data-toggle="modal"
+                                   data-fid="{{ item.id }}"
+                                   data-target="#alertModal">
+                                    <i class="fa fa-trash" aria-hidden="true"></i>
+                                </a>
+                            {% endif %}
                         </td>
                     </tr>
                 {% endfor %}

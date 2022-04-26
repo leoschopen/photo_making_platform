@@ -97,7 +97,7 @@
                                         <p>价格：{{ item.task_price }}</p>
                                         <p>距离：{{ item.distance }}公里</p>
                                         <p>
-                                            <a href="" class="btn btn-primary" role="button">抢单</a>
+                                            <a href="{% url 'project_get' project_id=item.id %}" class="btn btn-primary" role="button">抢单</a>
                                             <a href="{% url 'file' project_id=item.id %}" class="btn btn-default"
                                                role="button">详情</a>
                                         </p>

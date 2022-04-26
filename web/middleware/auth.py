@@ -25,7 +25,14 @@ class AuthMiddleware(MiddlewareMixin):
 
         user_id = request.session.get('user_id', 0)
         user_object = models.UserInfo.objects.filter(id=user_id).first()
+
+        all_user_object = models.UserInfo.objects.all()
+        all_task_project = models.Project.objects.all()
+
         request.tracer.user = user_object
+        request.tracer.all_user = all_user_object
+        request.tracer.all_task = all_task_project
+
         # 白名单：没有登录都可以访问的URL
         """
         1. 获取当用户访问的URL

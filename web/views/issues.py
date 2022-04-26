@@ -403,7 +403,7 @@ def invite_join(request, code):
     current_member = models.ProjectUser.objects.filter(project=invite_object.project).count()
     current_member = current_member + 1
     if current_member >= max_member:
-        return render(request, 'invite_join.html', {'error': '项目成员超限，请升级套餐'})
+        return render(request, 'invite_join.html', {'error': '项目成员超限'})
 
     # 邀请码是否过期？
 

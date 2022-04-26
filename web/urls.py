@@ -14,6 +14,7 @@ urlpatterns = [
     url(r'^index/$',home.index,name='index'),
 
 
+
     #项目管理
     url(r'^project/list/$', project.project_list, name='project_list'),
     # /project/star/my/1
@@ -45,6 +46,9 @@ urlpatterns = [
 
         url(r'^setting/$', setting.setting, name='setting'),
         url(r'^setting/delete/$', setting.delete, name='setting_delete'),
+
+        url(r'^project_get/$', project.project_get, name='project_get'),
+
     ], None, None)),
         url(r'^invite/join/(?P<code>\w+)/$', issues.invite_join, name='invite_join'),
 ]
