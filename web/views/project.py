@@ -1,62 +1,74 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 import time
+
+from django.db.models import Q
 from django.shortcuts import render, HttpResponse, redirect
 from django.http import JsonResponse
 from xpinyin import Pinyin
 
-from utils.location import CalDistance
+from utils.location import CalDistance, get_price
+from utils.map import getcode
 from web.forms.project import ProjectModelForm
 from web import models
 
 from utils.tencent.cos import create_bucket
 
 
+def get_task_price(request,task_lon,task_lat,lat,lon,hard,grow):
+    return get_price(request,task_lon,task_lat,lat,lon,hard,grow)
+
 def project_list(request):
     """ 项目列表 """
 
     # GET请求查看项目列表
     """
+    管理员查看的列表
     1. 从数据库中获取两部分数据
-        我创建的所有项目：已星标、未星标
-        我参与的所有项目：已星标、未星标
-    2. 提取已星标
-        列表 = 循环 [我创建的所有项目] + [我参与的所有项目] 把已星标的数据提取
-
-    得到三个列表：星标、创建、参与
+        所有项目：已星标、未星标
+    
+    会员查看的列表
+    2. 可选择的+已选择的（这两个加起来应该是所有的项目）
     
     每个列表的每一项要包括任务的名称，简要介绍，距离本用户的距离，价格
     """
     #管理员页面展示的数据
-    project_dict = {'star': [], 'my': [], 'join': []}
+    project_dict = {'star': [], 'nostar': [] , 'all':[]}
+
+
     #用户页面展示的数据
-    #这个数据应该是既不是我已参与的，也不是创建者是我自己的
-    all_project_dict = {'project': [], 'my': []}
-    all_project_list = models.Project.objects.filter().exclude(creator=request.tracer.user)
+    all_project_dict = {'select': [], 'selected': [], 'already': []}
+    #用户参加的项目要在projectuser里面查找
+    all_project_list = models.ProjectUser.objects.filter(user=request.tracer.user)
+
+
     user_lat, user_lon = request.tracer.user.latitude, request.tracer.user.longitude
-
-    #为马上要展示的任务添加距离当前用户的距离
+    #会员selected，为马上要展示的用户已参加任务添加距离当前用户的距离
     for row in all_project_list:
-        lat, lon = row.latitude,row.longitude
+        lat, lon = row.project.latitude,row.project.longitude
         distance = CalDistance(user_lon, user_lat, lon, lat)
-        row.distance = distance
-        all_project_dict['project'].append(row)
+        row.project.distance = distance
+        all_project_dict['selected'].append(row.project)
 
-    my_project_list = models.Project.objects.filter(creator=request.tracer.user)
+    #会员already
+    already_project_list = models.ProjectUser.objects.filter(Q(user=request.tracer.user)&Q(already=True))
+    for row in already_project_list:
+        all_project_dict['already'].append(row.project)
+
+   #管理员应该显示全部的任务
+    my_project_list = models.Project.objects.all()
     for row in my_project_list:
+        project_dict['all'].append(row)
         if row.star:
-            project_dict['star'].append({"value": row, 'type': 'my'})
+            project_dict['star'].append({"value": row, 'type': 'star'})
         else:
-            project_dict['my'].append(row)
+            project_dict['nostar'].append(row)
 
-
-    join_project_list = models.ProjectUser.objects.filter(user=request.tracer.user)
-    for item in join_project_list:
-        if item.star:
-            project_dict['star'].append({"value": item.project, 'type': 'join'})
-        else:
-            project_dict['join'].append(item.project)
-            all_project_dict['project'] = [item for item in all_project_dict['project'] if item not in set(project_dict['join'])]
+    #会员select应该是project全部的任务除去projectuser已经选择的任务,去除已经完成的任务
+    all_project_dict['select'] = [item for item in project_dict['all'] if item not in set(all_project_dict['selected'])]
+    all_project_dict['select'] = [item for item in all_project_dict['select'] if item not in set(all_project_dict['already'])]
+    all_project_dict['selected'] = [item for item in all_project_dict['selected'] if
+                                  item not in set(all_project_dict['already'])]
     form = ProjectModelForm(request)
 
 
@@ -69,17 +81,28 @@ def project_list(request):
         form = ProjectModelForm(request, data=request.POST)
         if form.is_valid():
             name = form.cleaned_data['name']
+            address = form.cleaned_data['location']
+            grow = form.cleaned_data['grow']
+            hard = form.cleaned_data['hard']
+
             p = Pinyin()
             name_pinyin = p.get_pinyin(name)
             # 1. 为项目创建一个桶
             bucket = "{}-{}-{}-1301633315".format(name_pinyin,request.tracer.user.mobile_phone, str(int(time.time())))
             region = 'ap-chongqing'
             create_bucket(bucket, region)
+            city = ''
+            my_location = getcode(address, city)
+            task_lon, task_lat = my_location.split(',')[0],my_location.split(',')[1]
 
             # 验证通过：项目名、颜色、描述 + creator谁创建的项目？instance为当前的modelform对象
             form.instance.bucket = bucket
             form.instance.region = region
             form.instance.creator = request.tracer.user
+            form.instance.longitude = task_lon
+            form.instance.latitude = task_lat
+            form.instance.task_price = get_task_price(request,float(task_lon),float(task_lat),user_lon,user_lat,hard,grow)
+
             # 创建项目
             form.save()
             return JsonResponse({'status': True})
@@ -89,27 +112,17 @@ def project_list(request):
 
 def project_star(request, project_type, project_id):
     """ 星标项目 """
-    if project_type == 'my':
-        models.Project.objects.filter(id=project_id, creator=request.tracer.user).update(star=True)
+    if project_type != 'star':
+        models.Project.objects.filter(id=project_id).update(star=True)
         return redirect('project_list')
-
-    if project_type == 'join':
-        models.ProjectUser.objects.filter(project_id=project_id, user=request.tracer.user).update(star=True)
-        return redirect('project_list')
-
     return HttpResponse('请求错误')
 
 
 def project_unstar(request, project_type, project_id):
     """ 取消星标 """
-    if project_type == 'my':
-        models.Project.objects.filter(id=project_id, creator=request.tracer.user).update(star=False)
+    if project_type == 'star':
+        models.Project.objects.filter(id=project_id).update(star=False)
         return redirect('project_list')
-
-    if project_type == 'join':
-        models.ProjectUser.objects.filter(project_id=project_id, user=request.tracer.user).update(star=False)
-        return redirect('project_list')
-
     return HttpResponse('请求错误')
 
 

@@ -69,6 +69,11 @@
                     <a class="btn btn-success btn-xs" data-toggle="modal" data-target="#addModal" data-whatever="新建文件夹">
                         <i class="fa fa-plus-circle" aria-hidden="true"></i> 新建文件夹
                     </a>
+                    {% if request.tracer.user.id == 7 %}
+                        <a class="btn btn-danger btn-xs" data-toggle="modal" data-target="#alertModal2">
+                            <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 通过审核
+                        </a>
+                    {% endif %}
                 </div>
             </div>
             <!-- Table -->
@@ -98,8 +103,8 @@
                         </td>
                         <td>
                             {% if item.file_type == 1 %}
-                                {% widthratio item.file_size 1024 1%}KB
-{#                                {{ item.file_size }}#}
+                                {% widthratio item.file_size 1024 1 %}KB
+                                {#                                {{ item.file_size }}KB#}
                             {% else %}
                                 -
                             {% endif %}
@@ -123,7 +128,7 @@
                                 </a>
                             {% endif %}
 
-                            {% if request.tracer.user.username == item.update_user.username %}
+                            {% if request.tracer.user.username == item.update_user.username or request.tracer.user.id == 7 %}
                                 <a class="btn btn-danger btn-xs"
                                    data-toggle="modal"
                                    data-fid="{{ item.id }}"
@@ -185,7 +190,25 @@
             </div>
         </div>
     </div>
-{#进度条#}
+
+
+    <div class="modal fade" id="alertModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="alert alert-success alert-dismissible fade in" role="alert">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">×</span></button>
+                <h4>是否要确定通过？</h4>
+                <p style="padding-top: 20px;padding-bottom: 20px;">
+                    您将通过该用户提交的资料。
+                </p>
+                <p style="text-align: right;">
+                    <a class="btn btn-default btn-sm" data-dismiss="modal" aria-label="Close">取 消</a>
+                    <button id="btnPass" type="button" class="btn btn-danger btn-sm">确 定</button>
+                </p>
+            </div>
+        </div>
+    </div>
+    {#进度条#}
     <div id="uploadProgress" class="upload-progress hide">
         <div class="panel panel-primary">
             <div class="panel-heading">
@@ -257,6 +280,7 @@
             bindModelSubmit();
             bindDeleteSubmit();
             bindUploadFile();
+            bindPassSubmit();
         });
 
         function bindUploadFile() {
@@ -267,7 +291,7 @@
                 // 获取本次要上传的每个文件 名称&大小
                 var checkFileList = [];
                 $.each(fileList, function (index, fileObject) {
-                    checkFileList.push({'name': fileObject.name, 'size': fileObject.size})
+                    checkFileList.push({'name': fileObject.name, 'size': fileObject.size / 1024})
                 });
 
                 // 把这些数据发送到django后台：Django后台进行容量的校验，如果么有问题则返回临时凭证；否则返回错误信息；
@@ -297,7 +321,7 @@
                     var fileName = fileObject.name;
                     var fileSize = fileObject.size;
                     var key = (new Date()).getTime() + "_" + fileName;
-{#创建一个jq对象，上传一个文件就clone一个，加入到进度条里#}
+                    {#创建一个jq对象，上传一个文件就clone一个，加入到进度条里#}
                     var tr = $('#progressTemplate').find('tr').clone();
                     tr.find('.name').text(fileName);
                     $('#progressList').append(tr);

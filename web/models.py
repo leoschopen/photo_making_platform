@@ -69,15 +69,26 @@ class Project(models.Model):
         (6, "#4B7A95"),  # 7461c2,
         (7, "#E87A68"),  # 20bfa3,
     )
-
+    HARD_CHOICES = (
+        (20,"困难任务"),
+        (10,"一般困难任务"),
+        (5,"简单任务"),
+    )
+    GROW_CHOICES = (
+        (20,"经济发展水平高"),
+        (15,"经济发展水平较高"),
+        (10,"经济发展水平一般"),
+        (5,"经济发展水平不高"),
+    )
     name = models.CharField(verbose_name='任务名', max_length=32)
     task_price = models.FloatField(verbose_name='任务佣金')
     color = models.SmallIntegerField(verbose_name='颜色', choices=COLOR_CHOICES, default=1)
     desc = models.CharField(verbose_name='任务描述', max_length=255, null=True, blank=True)
     use_space = models.IntegerField(verbose_name='任务相关文件已使用空间', default=0)
     star = models.BooleanField(verbose_name='星标', default=False)
-    hard = models.IntegerField(verbose_name='任务难易程度', default=20)
-    grow = models.IntegerField(verbose_name='任务所在地区发达程度', default=20)
+    hard = models.IntegerField(verbose_name='任务难易程度', choices=HARD_CHOICES, default=20)
+    grow = models.IntegerField(verbose_name='任务所在地区发达程度', choices=GROW_CHOICES, default=20)
+    location = models.CharField(verbose_name='任务位置', max_length=255, null=True, blank=True)
     latitude = models.FloatField(verbose_name='经度', default=22.000000)
     longitude = models.FloatField(verbose_name='纬度', default=22.000000)
 
@@ -95,6 +106,7 @@ class ProjectUser(models.Model):
     user = models.ForeignKey(verbose_name='领取任务者', to='UserInfo', on_delete=models.CASCADE)
     project = models.ForeignKey(verbose_name='任务', to='Project', on_delete=models.CASCADE)
     star = models.BooleanField(verbose_name='星标', default=False)
+    already = models.BooleanField(verbose_name='完成状态', default=False)
     create_datetime = models.DateTimeField(verbose_name='加入时间', auto_now_add=True)
 
 

@@ -114,37 +114,13 @@
         <div class="panel panel-default">
             <div class="panel-heading"><i class="fa fa-list" aria-hidden="true"></i> 我创建的</div>
             <div class="panel-body">
-                {% for item in project_dict.my %}
+                {% for item in project_dict.nostar %}
                     <div class="item">
                         <a href="{% url 'dashboard' project_id=item.id %}" class="title"
                            style="background-color: {{ item.get_color_display }};">{{ item.name }}</a>
                         <div class="info">
                             <div>
                                 <a href="{% url 'project_star' project_type='my' project_id=item.id %}">
-                                    <i class="fa fa-star" aria-hidden="true" style="color: #d5d5d5"></i>
-                                </a>
-                                <span>{{ item.creator.username }}</span>
-                            </div>
-                            <div>
-                                <i class="fa fa-user-o" aria-hidden="true"></i>
-                                <span>{{ item.join_count }}</span>
-                            </div>
-                        </div>
-                    </div>
-                {% endfor %}
-            </div>
-        </div>
-
-        <div class="panel panel-default">
-            <div class="panel-heading"><i class="fa fa-handshake-o" aria-hidden="true"></i> 我参与的</div>
-            <div class="panel-body">
-                {% for item in project_dict.join %}
-                    <div class="item">
-                        <a href="{% url 'dashboard' project_id=item.id %}" class="title"
-                           style="background-color: {{ item.get_color_display }};">{{ item.name }}</a>
-                        <div class="info">
-                            <div>
-                                <a href="{% url 'project_star' project_type='join' project_id=item.id %}">
                                     <i class="fa fa-star" aria-hidden="true" style="color: #d5d5d5"></i>
                                 </a>
                                 <span>{{ item.creator.username }}</span>
@@ -179,7 +155,9 @@
                                 <label for="{{ field.id_for_label }}">{{ field.label }}</label>
                                 {{ field }}
                                 <span class="error-msg"></span>
+
                             </div>
+
                         {% endfor %}
                     </form>
 

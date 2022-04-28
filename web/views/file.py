@@ -38,9 +38,13 @@ def file(request, project_id):
             parent = parent.parent
 
         # 当前目录下所有的文件 & 文件夹获取到即可
-        queryset = models.FileRepository.objects.filter(
-            Q(project=request.tracer.project) & Q(update_user_id=request.tracer.user.id))
-        # queryset = models.FileRepository.objects.filter(update_user_id=request.tracer.user.id)
+        #管理员获取全部列表，当前用户获取自己的列表
+        if request.tracer.user.id == 7:
+            queryset = models.FileRepository.objects.filter(project=request.tracer.project)
+        else:
+            queryset = models.FileRepository.objects.filter(
+                Q(project=request.tracer.project) & Q(update_user_id=request.tracer.user.id))
+
         if parent_object:
             # 进入了某目录
             file_object_list = queryset.filter(parent=parent_object).order_by('-file_type')
@@ -234,3 +238,8 @@ def file_download(request, project_id, file_id):
     # 设置响应头：中文件文件名转义
     response['Content-Disposition'] = "attachment; filename={};".format(escape_uri_path(file_object.name))
     return response
+
+def file_pass(request, user_id):
+    #通过该用户的该项目，就是在该用户的all_project_dict中的already添加上该项目
+    #models.ProjectUser.objects.filter().update(star=True)
+    pass

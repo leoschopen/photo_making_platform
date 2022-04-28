@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "country": "中国",
+  "countryCode": "CN",
+  "region": "SN",
+  "regionName": "陕西",
+  "city": "Yintai",
+  "zip": "",
+  "lat": 35.394,
+  "lon": 109.188,
+  "timezone": "Asia/Shanghai",
+  "isp": "Chinanet",
+  "org": "Chinanet SN",
+  "as": "AS4134 CHINANET-BACKBONE",
+  "query": "1.85.61.32"
+}
