@@ -135,11 +135,11 @@
                         <table class="table table-right">
                             <tbody>
                             <tr>
-                                <td class="label-left">项目名称 ：</td>
+                                <td class="label-left">任务名称 ：</td>
                                 <td>{{ request.tracer.project.name }}</td>
                             </tr>
                             <tr>
-                                <td class="label-left">项目描述 ：</td>
+                                <td class="label-left">任务描述 ：</td>
                                 <td>{{ request.tracer.project.desc }}</td>
                             </tr>
                             <tr>
@@ -149,9 +149,15 @@
                             <tr>
                                 <td class="label-left">项目空间 ：</td>
                                 <td> {% user_space request.tracer.project.use_space %}
-                                    / {{ request.tracer.price_policy.project_space }} GB
+                                    / 10 GB
                                 </td>
                             </tr>
+                            {% if request.tracer.user.id != 7 %}
+                                <tr>
+                                    <td class="label-left">任务价格 ：</td>
+                                    <td>{{ request.tracer.project.task_price }}</td>
+                                </tr>
+                            {% endif %}
                             </tbody>
                         </table>
                     </div>

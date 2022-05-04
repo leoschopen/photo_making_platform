@@ -81,7 +81,6 @@ class Project(models.Model):
         (5,"经济发展水平不高"),
     )
     name = models.CharField(verbose_name='任务名', max_length=32)
-    task_price = models.FloatField(verbose_name='任务佣金')
     color = models.SmallIntegerField(verbose_name='颜色', choices=COLOR_CHOICES, default=1)
     desc = models.CharField(verbose_name='任务描述', max_length=255, null=True, blank=True)
     use_space = models.IntegerField(verbose_name='任务相关文件已使用空间', default=0)
@@ -107,6 +106,7 @@ class ProjectUser(models.Model):
     project = models.ForeignKey(verbose_name='任务', to='Project', on_delete=models.CASCADE)
     star = models.BooleanField(verbose_name='星标', default=False)
     already = models.BooleanField(verbose_name='完成状态', default=False)
+    task_price = models.FloatField(verbose_name='任务价格', default=65)
     create_datetime = models.DateTimeField(verbose_name='加入时间', auto_now_add=True)
 
 

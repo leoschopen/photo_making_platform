@@ -69,11 +69,6 @@
                     <a class="btn btn-success btn-xs" data-toggle="modal" data-target="#addModal" data-whatever="新建文件夹">
                         <i class="fa fa-plus-circle" aria-hidden="true"></i> 新建文件夹
                     </a>
-                    {% if request.tracer.user.id == 7 %}
-                        <a class="btn btn-danger btn-xs" data-toggle="modal" data-target="#alertModal2">
-                            <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 通过审核
-                        </a>
-                    {% endif %}
                 </div>
             </div>
             <!-- Table -->
@@ -121,6 +116,25 @@
                                    data-whatever="修改文件夹">
                                     <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                 </a>
+                                {#                                只有管理员和根目录的文件夹可以显示通过审核#}
+                                {% if request.tracer.user.id == 7 and item.already == False and item.parent.id == null %}
+                                    <a class="btn btn-danger btn-xs"
+                                       data-toggle="modal"
+                                       data-fid="{{ item.id }}"
+                                       data-target="#alertModal2">
+                                        <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 待审核
+                                    </a>
+                                {% endif %}
+                                {% if item.already == True and item.parent.id == null %}
+                                    <a class="btn btn-success btn-xs">
+                                        <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 通过审核
+                                    </a>
+                                {% endif %}
+                                {% if request.tracer.user.id != 7 and item.already == False and item.parent.id == null %}
+                                    <a class="btn btn-danger btn-xs">
+                                        <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 待审核
+                                    </a>
+                                {% endif %}
                             {% else %}
                                 <a class="btn btn-default btn-xs"
                                    href="{% url 'file_download' project_id=request.tracer.project.id file_id=item.id %}">
@@ -274,6 +288,7 @@
         var COS_CREDENTIAL = "{% url 'cos_credential' project_id=request.tracer.project.id %}";
         var FILE_POST = "{% url 'file_post' project_id=request.tracer.project.id %}";
         var CURRENT_FOLDER_ID = "{{ folder_object.id }}";
+        var FILE_PASS_URL = "{% url 'file_pass' project_id=request.tracer.project.id %}"
 
         $(function () {
             initAddModal();
@@ -389,6 +404,22 @@
             })
         }
 
+        function bindPassSubmit() {
+            $('#btnPass').click(function () {
+                // 获取要通过那行ID
+                $.ajax({
+                    url: FILE_PASS_URL,
+                    type: "GET",
+                    data: {fid: $(this).attr('fid')},
+                    success: function (res) {
+                        if (res.status) {
+                            location.href = location.href;
+                        }
+                    }
+                })
+            })
+        }
+
         function initAddModal() {
             $('#addModal').on('show.bs.modal', function (event) {
                 var button = $(event.relatedTarget); // Button that triggered the modal
@@ -413,6 +444,13 @@
                 var button = $(event.relatedTarget); // Button that triggered the modal
                 var fid = button.data('fid'); // Extract info from data-* attributes
                 $('#btnDelete').attr('fid', fid);
+
+            });
+
+            $('#alertModal2').on('show.bs.modal', function (event) {
+                var button = $(event.relatedTarget); // Button that triggered the modal
+                var fid = button.data('fid'); // Extract info from data-* attributes
+                $('#btnPass').attr('fid', fid);
 
             })
         }

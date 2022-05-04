@@ -31,7 +31,7 @@ class IssuesModelForm(BootStrapForm, forms.ModelForm):
 
         # 3.指派和关注者
         # 数据库找到当前项目的参与者 和 创建者
-        print('hewiufwiegf',request.tracer.project.creator_id)
+        #print('hewiufwiegf',request.tracer.project.creator_id)
 
 
 

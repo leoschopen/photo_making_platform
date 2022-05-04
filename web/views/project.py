@@ -36,9 +36,9 @@ def project_list(request):
     project_dict = {'star': [], 'nostar': [] , 'all':[]}
 
 
-    #用户页面展示的数据
+    #用户页面展示的数据,分为待选择，已选择，已完成
     all_project_dict = {'select': [], 'selected': [], 'already': []}
-    #用户参加的项目要在projectuser里面查找
+    # 用户参加的项目要在已选择的projectuser里面查找
     all_project_list = models.ProjectUser.objects.filter(user=request.tracer.user)
 
 
@@ -58,6 +58,10 @@ def project_list(request):
    #管理员应该显示全部的任务
     my_project_list = models.Project.objects.all()
     for row in my_project_list:
+        lat, lon = row.latitude, row.longitude
+        distance = CalDistance(user_lon, user_lat, lon, lat)
+        row.distance = distance
+        row.task_price = get_task_price(request, float(lon), float(lat), user_lon, user_lat, row.hard, row.grow)
         project_dict['all'].append(row)
         if row.star:
             project_dict['star'].append({"value": row, 'type': 'star'})
@@ -86,11 +90,13 @@ def project_list(request):
             hard = form.cleaned_data['hard']
 
             p = Pinyin()
-            name_pinyin = p.get_pinyin(name)
+            name_pinyin = p.get_pinyin(name)[:10]
             # 1. 为项目创建一个桶
-            bucket = "{}-{}-{}-1301633315".format(name_pinyin,request.tracer.user.mobile_phone, str(int(time.time())))
+            bucket = "{}-{}-1301633315".format(name_pinyin, str(int(time.time())))
             region = 'ap-chongqing'
             create_bucket(bucket, region)
+
+            #为项目添加价格
             city = ''
             my_location = getcode(address, city)
             task_lon, task_lat = my_location.split(',')[0],my_location.split(',')[1]
@@ -101,7 +107,6 @@ def project_list(request):
             form.instance.creator = request.tracer.user
             form.instance.longitude = task_lon
             form.instance.latitude = task_lat
-            form.instance.task_price = get_task_price(request,float(task_lon),float(task_lat),user_lon,user_lat,hard,grow)
 
             # 创建项目
             form.save()
@@ -140,7 +145,11 @@ def project_get(request, project_id):
     if current_member >= max_member:
         return render(request, 'invite_join.html', {'error': '项目成员超限'})
 
-    models.ProjectUser.objects.create(user=request.tracer.user, project=project_object)
+    user_lat, user_lon = request.tracer.user.latitude, request.tracer.user.longitude
+    task_lon, task_lat = project_object.longitude, project_object.latitude
+    task_price = get_task_price(request, float(task_lon), float(task_lat), user_lon, user_lat, project_object.hard, project_object.grow)
+
+    models.ProjectUser.objects.create(user=request.tracer.user, project=project_object, task_price=task_price)
 
     # ####### 问题2： 更新项目参与成员 #######
     project_object.join_count += 1

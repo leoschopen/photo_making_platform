@@ -38,9 +38,12 @@ def file(request, project_id):
             parent = parent.parent
 
         # 当前目录下所有的文件 & 文件夹获取到即可
-        #管理员获取全部列表，当前用户获取自己的列表
+        # 管理员获取全部列表，当前用户获取自己的列表
+        # 管理员获取的列表要对审核状态加以判断，如果已通过在file.html显示已通过，无需重复操作的提示
         if request.tracer.user.id == 7:
+            # 获取该项目下所有的文件文件夹，想给用户参加的项目加上一个审核状态
             queryset = models.FileRepository.objects.filter(project=request.tracer.project)
+
         else:
             queryset = models.FileRepository.objects.filter(
                 Q(project=request.tracer.project) & Q(update_user_id=request.tracer.user.id))
@@ -51,6 +54,12 @@ def file(request, project_id):
         else:
             # 根目录
             file_object_list = queryset.filter(parent__isnull=True).order_by('-file_type')
+            #为每个根目录的文件夹加上一个完成状态
+            for item in file_object_list:
+                if item.file_type == 2:
+                    user = models.UserInfo.objects.filter(id=item.update_user_id)
+                    user_project = models.ProjectUser.objects.filter(Q(user=user) & Q(project_id=project_id)).first()
+                    item.already = user_project.already
         form = FolderModelForm(request, parent_object)
 
         context = {
@@ -239,7 +248,21 @@ def file_download(request, project_id, file_id):
     response['Content-Disposition'] = "attachment; filename={};".format(escape_uri_path(file_object.name))
     return response
 
-def file_pass(request, user_id):
-    #通过该用户的该项目，就是在该用户的all_project_dict中的already添加上该项目
-    #models.ProjectUser.objects.filter().update(star=True)
-    pass
+
+def file_pass(request, project_id):
+    fid = request.GET.get('fid')
+
+    pass_object = models.FileRepository.objects.filter(id=fid, project=request.tracer.project).first()
+    # 管理员的操作，通过该用户的该项目，就是在该用户的all_project_dict中的already添加上该项目
+    user = models.UserInfo.objects.filter(id = pass_object.update_user_id).filter().first()
+    #获取该用户该项目审核状态
+    user_project = models.ProjectUser.objects.filter(Q(user=user)&Q(project_id=project_id)).first()
+    if user_project.already:
+        return JsonResponse({'status': True})
+    else:
+        user_project.already = True
+        asset = user.asset + user_project.task_price
+        user.asset = asset
+        user_project.save()
+        user.save()
+        return JsonResponse({'status': True})

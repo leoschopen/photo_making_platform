@@ -159,6 +159,7 @@ WHITE_REGEX_URL_LIST = [
     "/register/",
     "/send/sms/",
     "/login/",
+    "/login/sms/",
     "/image/code/",
     "/index/",
 ]

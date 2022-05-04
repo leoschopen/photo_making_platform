@@ -11,11 +11,12 @@ from web.forms.widgets import ColorRadioSelect
 
 class ProjectModelForm(BootStrapForm, forms.ModelForm):
     bootstrap_class_exclude = ['color']
+
     # desc = forms.CharField(widget=forms.Textarea(attrs={'xx': 123}))
     class Meta:
         model = models.Project
-        fields = ['name', 'location', 'hard' , 'grow' ,'color', 'desc']
-        #重写插件CharField变Textarea
+        fields = ['name', 'location', 'user_count', 'hard', 'grow', 'color', 'desc']
+        # 重写插件CharField变Textarea
         widgets = {
             'desc': forms.Textarea,
             'color': ColorRadioSelect(attrs={'class': 'color-radio'}),
@@ -40,8 +41,7 @@ class ProjectModelForm(BootStrapForm, forms.ModelForm):
         # 现在已创建多少项目？
         count = models.Project.objects.filter(creator=self.request.tracer.user).count()
 
-#        if count >= self.request.tracer.price_policy.project_num:
- #           raise ValidationError('任务个数超限，星级等级不够')
+        #        if count >= self.request.tracer.price_policy.project_num:
+        #           raise ValidationError('任务个数超限，星级等级不够')
 
         return name
-

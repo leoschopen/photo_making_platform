@@ -26,13 +26,9 @@ def register(request):
     if form.is_valid():
         # 验证通过，写入数据库（密码要是密文）
         # instance = form.save，在数据库中新增一条数据，并将新增的这条数据赋值给instance
-
         # 用户表中新建一条数据（注册）
         instance = form.save()
-
         # 创建交易记录
-        # 方式一
-        # policy_object = models.PricePolicy.objects.filter(category=1, title="个人免费版").first()
         models.Transaction.objects.create(
             status=2,
             order=str(uuid.uuid4()),
@@ -41,10 +37,7 @@ def register(request):
             price=0,
             start_datetime=datetime.datetime.now()
         )
-
         # 方式二
-
-
         return JsonResponse({'status': True, 'data': '/login/'})
 
     return JsonResponse({'status': False, 'error': form.errors})
