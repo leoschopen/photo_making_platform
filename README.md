@@ -45,13 +45,13 @@ python manage.py runserver 8000
 
 # 界面
 1. 任务管理界面
-![任务管理界面](./imgs/manage.jpg)
+![任务管理界面](imgs/manage.jpg)
 2. 任务详情界面
-![任务详情界面](./imgs/task.jpg)
+![任务详情界面](imgs/task.jpg)
 3. 任务进度追踪界面
-![任务进度追踪界面](./imgs/trace.jpg)
+![任务进度追踪界面](imgs/trace.jpg)
 4. 任务相关文件仓库
-![任务相关文件仓库](./imgs/file.jpg)
+![任务相关文件仓库](imgs/file.jpg)
 # 贡献
 欢迎提交 Pull Request。如果发现任何问题或需要改进的地方,请开 Issue。
 
