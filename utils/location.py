@@ -11,7 +11,7 @@ sys.path.append(base_dir)  # 将项目的路径加入到sys.path这样django启�
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', "bug_manage.settings")
 django.setup()
 
-from pyproj import Transformer
+
 from web import models
 from sklearn.datasets import make_blobs
 from matplotlib import pyplot

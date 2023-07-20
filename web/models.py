@@ -112,7 +112,7 @@ class ProjectUser(models.Model):
 
 class FileRepository(models.Model):
     """ 文件库 """
-    project = models.ForeignKey(verbose_name='项目', to='Project')
+    project = models.ForeignKey(verbose_name='项目', to='Project', on_delete=models.CASCADE)
     file_type_choices = (
         (1, '文件'),
         (2, '文件夹')
@@ -124,16 +124,16 @@ class FileRepository(models.Model):
     file_path = models.CharField(verbose_name='文件路径', max_length=255, null=True,
                                  blank=True)  # https://桶.cos.ap-chengdu/....
 
-    parent = models.ForeignKey(verbose_name='父级目录', to='self', related_name='child', null=True, blank=True)
+    parent = models.ForeignKey(verbose_name='父级目录', to='self', related_name='child', null=True, blank=True, on_delete=models.CASCADE)
 
-    update_user = models.ForeignKey(verbose_name='最近更新者', to='UserInfo')
+    update_user = models.ForeignKey(verbose_name='最近更新者', to='UserInfo', on_delete=models.CASCADE)
     update_datetime = models.DateTimeField(verbose_name='更新时间', auto_now=True)
 
 
 class Issues(models.Model):
     """ 问题 """
-    project = models.ForeignKey(verbose_name='项目', to='Project')
-    module = models.ForeignKey(verbose_name='阶段', to='Module', null=True, blank=True)
+    project = models.ForeignKey(verbose_name='项目', to='Project', on_delete=models.CASCADE)
+    module = models.ForeignKey(verbose_name='阶段', to='Module', null=True, blank=True, on_delete=models.CASCADE)
 
     subject = models.CharField(verbose_name='主题', max_length=80)
     desc = models.TextField(verbose_name='问题描述')
@@ -156,12 +156,12 @@ class Issues(models.Model):
     )
     status = models.SmallIntegerField(verbose_name='状态', choices=status_choices, default=1)
 
-    assign = models.ForeignKey(verbose_name='指派', to='UserInfo', related_name='task', null=True, blank=True)
+    assign = models.ForeignKey(verbose_name='指派', to='UserInfo', related_name='task', null=True, blank=True, on_delete=models.CASCADE)
 
     start_date = models.DateField(verbose_name='开始时间', null=True, blank=True)
     end_date = models.DateField(verbose_name='结束时间', null=True, blank=True)
 
-    creator = models.ForeignKey(verbose_name='创建者', to='UserInfo', related_name='create_problems')
+    creator = models.ForeignKey(verbose_name='创建者', to='UserInfo', related_name='create_problems', on_delete=models.CASCADE)
 
     create_datetime = models.DateTimeField(verbose_name='创建时间', auto_now_add=True)
     latest_update_datetime = models.DateTimeField(verbose_name='最后更新时间', auto_now=True)
@@ -174,7 +174,7 @@ class Issues(models.Model):
 
 class Module(models.Model):
     """ 模块（里程碑）,任务可以分不同的阶段"""
-    project = models.ForeignKey(verbose_name='项目', to='Project')
+    project = models.ForeignKey(verbose_name='项目', to='Project', on_delete=models.CASCADE)
     title = models.CharField(verbose_name='阶段名称', max_length=32)
 
     def __str__(self):
@@ -190,17 +190,17 @@ class IssuesReply(models.Model):
     )
     reply_type = models.IntegerField(verbose_name='类型', choices=reply_type_choices)
 
-    issues = models.ForeignKey(verbose_name='问题', to='Issues')
+    issues = models.ForeignKey(verbose_name='问题', to='Issues', on_delete=models.CASCADE)
     content = models.TextField(verbose_name='描述')
-    creator = models.ForeignKey(verbose_name='创建者', to='UserInfo', related_name='create_reply')
+    creator = models.ForeignKey(verbose_name='创建者', to='UserInfo', related_name='create_reply', on_delete=models.CASCADE)
     create_datetime = models.DateTimeField(verbose_name='创建时间', auto_now_add=True)
 
-    reply = models.ForeignKey(verbose_name='回复', to='self', null=True, blank=True)
+    reply = models.ForeignKey(verbose_name='回复', to='self', null=True, blank=True, on_delete=models.CASCADE)
 
 
 class ProjectInvite(models.Model):
     """ 项目邀请码 """
-    project = models.ForeignKey(verbose_name='项目', to='Project')
+    project = models.ForeignKey(verbose_name='项目', to='Project', on_delete=models.CASCADE)
     code = models.CharField(verbose_name='邀请码', max_length=64, unique=True)
     count = models.PositiveIntegerField(verbose_name='限制数量', null=True, blank=True, help_text='空表示无数量限制')
     use_count = models.PositiveIntegerField(verbose_name='已邀请数量', default=0)
@@ -212,4 +212,4 @@ class ProjectInvite(models.Model):
     )
     period = models.IntegerField(verbose_name='有效期', choices=period_choices, default=1440)
     create_datetime = models.DateTimeField(verbose_name='创建时间', auto_now_add=True)
-    creator = models.ForeignKey(verbose_name='创建者', to='UserInfo', related_name='create_invite')
+    creator = models.ForeignKey(verbose_name='创建者', to='UserInfo', related_name='create_invite', on_delete=models.CASCADE)

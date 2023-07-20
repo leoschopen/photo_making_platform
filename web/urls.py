@@ -51,7 +51,7 @@ urlpatterns = [
 
         url(r'^project_get/$', project.project_get, name='project_get'),
 
-    ], None, None)),
+    ], None)),
         url(r'^invite/join/(?P<code>\w+)/$', issues.invite_join, name='invite_join'),
 ]
 

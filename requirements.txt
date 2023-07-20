@@ -24,6 +24,4 @@ requests==2.23.0
 six==1.16.0
 sqlparse==0.4.2
 typing_extensions==4.0.1
-urllib3==1.25.11
-wrapt==1.13.3
-zipp==3.6.0
+
